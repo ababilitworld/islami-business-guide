@@ -1,649 +1,240 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>ইসলামী অর্থনীতি: বাই, শেয়ার, ইজারা | হালাল আয়ের নির্দেশিকা</title>
-  <!-- Google Fonts + Font Awesome -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>ইসলামি ব্যবসায়িক নির্দেশিকা | হালাল উপার্জনের পথনির্দেশ</title>
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Open Graph / Facebook Meta Tags (Enhanced) -->
+    <meta property="og:title" content="ইসলামি ব্যবসায়িক নির্দেশিকা - হালাল উপার্জনের সম্পূর্ণ গাইড" />
+    <meta property="og:description" content="হালাল উপার্জনের সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ। ডাউনলোড করুন পূর্ণাঙ্গ ইসলামী ব্যবসায়িক নির্দেশিকা PDF।" />
+    <meta property="og:image" content="https://ababilitworld.github.io/islami-business-guide/asset/docs/book-cover-islami-business-rule.jpg" />
+    <meta property="og:url" content="https://ababilitworld.github.io/islami-business-guide" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ইসলামি ব্যবসায়িক নির্দেশিকা" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    :root {
-      --paper: #fefaf2;
-      --ink: #1e2f2a;
-      --primary: #0f6b4f;
-      --primary-dark: #0a4d38;
-      --gold: #d4af37;
-      --gold-light: #f5e6b8;
-      --accent: #b87333;
-      --sand: #f3ede5;
-      --shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-      --green-soft: #e1f5ea;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f2b1d 0%, #1a3f2a 100%);
+            color: #e8f0e8;
+            line-height: 1.6;
+            padding: 1.5rem;
+            min-height: 100vh;
+        }
 
-    body {
-      background: #dcd2c4;
-      font-family: 'Inter', 'Noto Sans Bengali', sans-serif;
-      color: var(--ink);
-      line-height: 1.55;
-      padding: 2rem 1rem;
-      display: flex;
-      justify-content: center;
-    }
+        /* Main container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(2px);
+            border-radius: 2rem;
+            padding: 2rem 1.5rem;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease;
+        }
 
-    .ebook {
-      max-width: 1100px;
-      width: 100%;
-      background: var(--paper);
-      border-radius: 28px;
-      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
-      overflow: hidden;
-    }
+        /* Book cover image */
+        .book-cover {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .book-cover img {
+            max-width: 280px;
+            width: 90%;
+            border-radius: 1.2rem;
+            box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.5), 0 0 0 3px rgba(255,215,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .book-cover img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 25px 40px -12px black;
+        }
 
-    .section {
-      padding: 3rem 3.2rem;
-      transition: all 0.2s;
-    }
+        /* Headings & text */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-align: center;
+            background: linear-gradient(135deg, #f9e0a0, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
 
-    /* COVER */
-    .cover {
-      background: linear-gradient(125deg, #fff6ed 0%, #f7e9db 100%);
-      text-align: center;
-      border-bottom: 6px solid var(--gold);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 85vh;
-      break-after: page;
-    }
-    .cover h1 {
-      font-size: 3.8rem;
-      font-weight: 800;
-      background: linear-gradient(135deg, #0f6b4f, #b87333);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      margin-bottom: 1rem;
-    }
-    .cover .badge {
-      background: var(--primary);
-      color: var(--gold-light);
-      display: inline-block;
-      padding: 0.5rem 1.8rem;
-      border-radius: 60px;
-      font-weight: 600;
-      margin-bottom: 1.5rem;
-    }
-    .cover .sub {
-      font-size: 1.3rem;
-      border-top: 2px solid var(--gold);
-      border-bottom: 2px solid var(--gold);
-      display: inline-block;
-      padding: 0.5rem 2rem;
-    }
+        .hadith {
+            text-align: center;
+            font-size: 1.25rem;
+            font-style: italic;
+            background: rgba(0,0,0,0.3);
+            padding: 1rem;
+            border-radius: 1.5rem;
+            border-right: 4px solid #f5b042;
+            border-left: 4px solid #f5b042;
+            margin: 1.5rem 0;
+            color: #f8f3e0;
+        }
 
-    /* TOC grid */
-    .toc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-      margin: 2rem 0 1rem;
-    }
-    .toc-card {
-      background: white;
-      padding: 1.2rem;
-      border-radius: 20px;
-      box-shadow: var(--shadow);
-      border-left: 5px solid var(--gold);
-    }
-    .toc-card .chap-num {
-      font-size: 2rem;
-      font-weight: 800;
-      color: var(--primary);
-      line-height: 1;
-    }
+        .hadith i {
+            color: #ffd966;
+            margin: 8px;
+        }
 
-    .chapter {
-      break-before: page;
-      margin-top: 0;
-    }
-    .chapter h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      border-left: 8px solid var(--gold);
-      padding-left: 1.2rem;
-      margin-bottom: 1.8rem;
-      color: var(--primary-dark);
-    }
+        .description {
+            text-align: center;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            color: #cfdec7;
+        }
 
-    /* Quran & Hadith card styles */
-    .quran-grid, .hadith-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    .verse-card, .hadith-card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      border-right: 4px solid var(--gold);
-      transition: 0.2s;
-    }
-    .verse-card .arabic {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: #2c5a4a;
-      font-family: 'Amiri', 'Noto Sans Bengali', serif;
-      margin-bottom: 0.5rem;
-    }
-    .verse-card .reference {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.8rem;
-    }
-    .hadith-card .hadith-text {
-      font-style: italic;
-      margin-bottom: 0.8rem;
-      line-height: 1.6;
-    }
-    .highlight-box {
-      background: var(--green-soft);
-      border-radius: 28px;
-      padding: 1.6rem;
-      margin: 1.8rem 0;
-      text-align: left;
-      border: 1px solid #bdd9ce;
-    }
-     .highlight-box .header{
-      text-align: center;
-     }
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.8rem;
-      margin: 2rem 0;
-    }
-    .method-card {
-      background: white;
-      border-radius: 24px;
-      padding: 1.5rem;
-      box-shadow: var(--shadow);
-      border: 1px solid #e9dfd1;
-    }
-    .method-card i {
-      font-size: 2.2rem;
-      color: var(--accent);
-      margin-bottom: 1rem;
-    }
-    .method-card h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.8rem;
-      color: var(--primary);
-    }
-    .examples-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.2rem;
-      margin: 1.5rem 0;
-    }
-    .ex-card {
-      background: #fffbf5;
-      border-radius: 20px;
-      padding: 1rem 1.2rem;
-      border-left: 4px solid var(--gold);
-      font-size: 0.9rem;
-    }
-    .sector-tag {
-      background: #f0e7dc;
-      border-radius: 40px;
-      padding: 0.3rem 1rem;
-      font-size: 0.85rem;
-      font-weight: 500;
-      display: inline-block;
-      margin-top: 0.5rem;
-    }
-    .author-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
-      background: #fdf8f0;
-      border-radius: 32px;
-      padding: 2rem;
-      margin: 2rem 0;
-      align-items: center;
-    }
-    .print-bar {
-      text-align: right;
-      margin-bottom: 1rem;
-      position: sticky;
-      top: 20px;
-      z-index: 100;
-    }
-    .print-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 28px;
-      border-radius: 50px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.2);
-    }
+        /* Button group */
+        .button-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin: 2rem 0 1rem;
+        }
 
-    /* ========== IMPROVED PRINT STYLES: KEEP VISUAL IDENTITY ========== */
-    @media print {
-      body {
-        background: #b87333;
-        padding: 0;
-        margin: 0;
-      }
-      .ebook {
-        max-width: 100%;
-        margin: 0;
-        border-radius: 0;
-        box-shadow: none; /* shadows not critical for print, but we keep rest */
-      }
-      .print-bar, .print-btn {
-        display: none !important;
-      }
-      .section {
-        padding: 1.5rem 2rem;
-      }
-      .cover {
-        break-after: page;
-        min-height: 0;
-        page-break-after: always;
-        background: linear-gradient(125deg, #fff6ed 0%, #f7e9db 100%);
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .chapter {
-        break-before: page;
-        page-break-before: always;
-      }
-      /* Preserve background colors, gradients, shadows, borders */
-      .toc-card, .verse-card, .hadith-card, .method-card, .ex-card, .highlight-box, .author-grid {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* keep soft shadow if desired */
-        border: 1px solid #e0d6c8;
-      }
-      .cover .badge, .method-card i, .verse-card .arabic {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .cover h1 {
-        background: linear-gradient(135deg, #0f6b4f, #b87333);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      /* Keep all grid layouts intact */
-      .toc-grid, .quran-grid, .hadith-grid, .feature-grid, .examples-grid {
-        display: grid;
-        gap: 1.5rem;
-      }
-      /* Avoid breaking inside cards where possible */
-      .toc-card, .verse-card, .hadith-card, .method-card, .ex-card {
-        break-inside: avoid;
-        page-break-inside: avoid;
-      }
-      @page {
-        size: A4;
-        margin: 1.8cm;
-      }
-      h1, h2, h3 {
-        page-break-after: avoid;
-      }
-      /* Force background colors on all elements that have them */
-      body, .ebook, .section, .cover, .highlight-box, .author-grid, .verse-card, .hadith-card, .method-card, .ex-card {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      /* Keep border radius for print */
-      .verse-card, .hadith-card, .method-card, .ex-card, .toc-card, .author-grid, .highlight-box {
-        margin-top: 20px;
-        border-radius: 20px;
-      }
-      /* Ensure text colors remain */
-      .verse-card .reference, .method-card h3 {
-        color: var(--accent) !important;
-        -webkit-print-color-adjust: exact;
-         print-color-adjust: exact;
-      }
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0.9rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            border: none;
+            cursor: pointer;
+            background: #fff;
+            color: #1e3a2f;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-    @media (max-width: 750px) {
-      .section {
-        padding: 1.8rem;
-      }
-      .cover h1 {
-        font-size: 2.4rem;
-      }
-      .author-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-  </style>
+        .btn i {
+            font-size: 1.3rem;
+        }
+
+        .btn-download {
+            background: linear-gradient(95deg, #2e7d64, #1b5e3f);
+            color: white;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(95deg, #1f5f4b, #12462f);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px -8px black;
+        }
+
+        .btn-read {
+            background: rgba(255,255,240,0.15);
+            backdrop-filter: blur(8px);
+            color: #ffefc0;
+            border: 1px solid rgba(255,215,0,0.6);
+        }
+
+        .btn-read:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateY(-3px);
+            border-color: #ffd966;
+            color: #fff3cf;
+        }
+
+        /* Features section */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .feature-card {
+            background: rgba(0,0,0,0.25);
+            flex: 1;
+            min-width: 150px;
+            padding: 1rem 0.5rem;
+            border-radius: 1.5rem;
+            transition: all 0.2s;
+        }
+        .feature-card i {
+            font-size: 2rem;
+            color: #f5b042;
+            margin: 0.5rem;
+            display: inline-block;
+        }
+        .feature-card span {
+            display: block;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #adc5ae;
+            border-top: 1px solid rgba(255,255,200,0.15);
+            padding-top: 1.5rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 680px) {
+            body { padding: 1rem; }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .btn { padding: 0.7rem 1.2rem; font-size: 0.95rem; }
+            .hadith { font-size: 1rem; }
+        }
+    </style>
 </head>
 <body>
-<div class="ebook">
-  <div class="print-bar">
-    <button class="print-btn" id="printEbookBtn"><i class="fas fa-print"></i> 📄 প্রিন্ট / PDF (A4 লেআউট)</button>
-  </div>
 
-  <!-- COVER PAGE -->
-  <div class="cover section">
-    <div class="badge"><i class="fas fa-star-of-life"></i> শরিয়াহ সম্মত <i class="fas fa-star-of-life"></i></div>
-    <h1>ইসলামি ব্যবসায়িক নির্দেশিকা:<br>ক্রয়-বিক্রয়, শেয়ার, ইজারা</h1>
-    <div class="sub">হালাল ব্যবসার ত্রিমাত্রিক কাঠামো</div>
-    <div style="margin-top: 2rem;"> কুরআন-হাদীসের দলিল | ৩ টি মোড ও ৮টি উপ-পদ্ধতি | বাস্তব উদাহরণ </div>
-    <div style="margin-top: 3rem; font-size: 0.85rem;">ইসলামের সরল পথ | ইসলামী ওয়ে রিসার্চ টিম</div>
-  </div>
+<div class="container">
+    <!-- Book Cover Image (now displayed prominently) -->
 
-  <!-- TABLE OF CONTENTS -->
-  <div class="section" style="background: #fffbf5;">
-    <h2 style="font-size: 2rem; border-left: none; text-align: center;"><i class="fas fa-list-ul"></i> সূচিপত্র</h2>
-    <div class="toc-grid">
-      <div class="toc-card"><span class="chap-num">০১</span><br><strong>ভূমিকা</strong><br>কুরআন ও হাদীস ভিত্তিক মৌলিক নীতিমালা</div>
-      <div class="toc-card"><span class="chap-num">০২</span><br><strong>ব্যবসায়িক লেনদেন এর মূলনীতি ও ধাপ সমূহ</strong><br>কুরআন ও হাদীস ভিত্তিক মৌলিক নীতিমালা</div>
-      <div class="toc-card"><span class="chap-num">০৩</span><br><strong>ব্যবসায়িক কাঠামো</strong><br>ইসলামি শরিয়াহ সম্মত ব্যবসায়িক কাঠামো</div>
-      <div class="toc-card"><span class="chap-num">০৪</span><br><strong>বাস্তব উদাহরণ</strong><br>সকল খাত ও পদ্ধতি কভারেজ</div>
-      <div class="toc-card"><span class="chap-num">০৫</span><br><strong>কুরআন ও হাদিস ভিত্তিক ব্যাবসায়িক নির্দেশনা</strong><br> কুরআন-হাদীসের নির্দেশনা</div>
-      <div class="toc-card"><span class="chap-num">০৬</span><br><strong>উপসংহার</strong><br>আপনার হালাল রোডম্যাপ</div>
-      
-    </div>
-  </div>
-  <div class="chapter section">
-    <h2>📜 ০১ / ভূমিকা</h2>
-    <div class="highlight-box">
-      <div class="header">
-        <i class="fas fa-hand-holding-heart" style="font-size: 2rem; color: var(--primary);"></i>
-        <h3 style="margin: 0.5rem 0;">হালাল উপার্জন এর প্রয়োজনীয়তা</h3>      
-      </div>
-      <p>আসসালামু আলাইকুম ওয়া রহমাতুল্লাহি ওয়া বারাকাতুহু।
-আজ আমরা একটি তিক্ত সত্যের মুখোমুখি হব। 
-আমরা মুসলিমরা কেন ব্যবসায় জগতে পিছিয়ে পড়লাম? ইতিহাস সাক্ষী—এক সময় মুসলিম ব্যবসায়ী ছিল বিশ্বের সবচেয়ে বিশ্বস্ত। ইউরোপ, এশিয়া, আফ্রিকার বণিকরা তাদের কাছে পণ্য নিতো কারণ তারা জানতো – মুসলিম মানেই সত্যবাদী,আমানতদার, বিশ্বস্ত। 
-কেন একসময়ের সত্যবাদী, আমানতদার, বিশ্বস্ত মুসলিম ব্যবসায়ী আজ মিথ্যা অঙ্গীকার, প্রতারণা, ওজনে কম দেওয়া, সুদ গর্হিত কাজে লিপ্ত?<br><br>
-মনে রাখবেন! আল্লাহই ব্যবসার মূল আইন দিয়েছেন। রাসূল (সা.) তা বিশদভাবে ব্যাখ্যা করেছেন। রাসূলুল্লাহ (সা.) নিজে ব্যবসা করেছেন এবং আমাদের তা  শিখিয়েছেন। ইসলামে উপার্জন ও জীবিকার ক্ষেত্রে হালাল-হারামের সীমারেখা স্পষ্ট। 
-</p><br>
-      <p>রাসূলুল্লাহ ﷺ বলেছেন: <br><strong>"হালাল উপার্জন এর সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ।" (আল-বায়হাকী, শুয়াবুল ঈমান)</strong></p><br>
-      <p>পবিত্র কুরআনে আল্লাহ তায়ালা মানুষের জীবিকা নির্বাহের জন্য বিভিন্ন সৎ পেশার উল্লেখ ও স্বীকৃতি দিয়েছেন। এর মধ্যে উল্লেখযোগ্য হলো— <strong>বাণিজ্য বা ব্যবসা, কৃষি বা অনাবাদি জমি আবাদ, শ্রম বা শারীরিক পরিশ্রম, পশুপালন এবং বিভিন্ন কারিগরি ও সেবামূলক কাজ</strong>, যা মানুষকে হালাল উপায়ে জীবিকা অর্জনে উৎসাহিত করে।কুরআনের মূল নির্দেশ হলো—পেশা যেকোনোটিই হোক না কেন, তা অবশ্যই হালাল, সৎ এবং সততার সাথে পরিচালিত হতে হবে।</p><br>
-      <p>হালাল উপার্জন দোয়া ও ইবাদত কবুলের শর্ত। <br>রাসূলুল্লাহ ﷺ বলেছেন: <br><strong>“নিশ্চয় আল্লাহ পবিত্র, তিনি পবিত্র বস্তু ছাড়া গ্রহণ করেন না। আর তিনি মুমিনদেরকে যা আদেশ করেছেন, তা রাসূলগণকেও আদেশ করেছেন: 'হে রাসূলগণ! পবিত্র বস্তু থেকে আহার করো এবং সৎকর্ম করো।' অতঃপর তিনি এমন এক ব্যক্তির কথা উল্লেখ করলেন, যে দীর্ঘ সফর শেষে ধূলিমলিন অবস্থায় আকাশের দিকে হাত তুলে আল্লাহর কাছে প্রার্থনা করে, অথচ 'তার খাদ্য হারাম, পানীয় হারাম, পোশাক-পরিচ্ছদ হারাম এবং সে হারাম দিয়েই প্রতিপালিত। কাজেই কীভাবে তার দো‘আ কবুল হবে!'”(সহীহ মুসলিম হাদীস নং ১০১৫)</strong></p><br>
-      <p><strong>"যে ব্যক্তি হারাম উপার্জন করে এবং তা থেকে দান করে, তাতে কোনো সওয়াব নেই; আর যে তা থেকে খায়, তা জাহান্নামের আগুন ছাড়া অন্য কিছু নয়।" (মুসনাদে আহমাদ, ৮৩৭৪)।</strong></p><br>
-      <p>এছাড়া হালাল রুজি বরকত, আখিরাতে শান্তি ও আল্লাহর সন্তুষ্টি নিয়ে আসে। সুদের লেনদেন, ঘুষ, প্রতারণা, মিথ্যা ওজনের ব্যবসা সম্পূর্ণ হারাম। ইসলামী শরিয়াহ ব্যবসায় স্বচ্ছতা, পারস্পরিক সম্মতি, ঝুঁকি ভাগাভাগি এবং প্রকৃত সম্পদভিত্তিক লেনদেনের নির্দেশ দেয়। </p><br>
-      <p>মুসলিম ব্যবসায়ীরা যদি আজ আল্লহর দেয়া নিয়ম অনুযায়ি ও রসূল (সঃ ) এর দেখানো পথে ব্যবসায় পরিচালনা করে  তাহলে মুসলিম ব্যবসায়ীরা তাদের হারানো গৌরব ফিরে পাবে, দুনিয়াতে তারা নেতৃত্ব দিবে এবং আখিরাতে তারা সম্মানজনক জায়গায় স্থান পাবে ইনশাল্লাহ।</p><br>
-      <p>হে আল্লহ - সকল মুসলিম ব্যবসায়ীদেরকে উক্ত কাজে তৌফিক প্রদান করুন। এবং হালাল ব্যবসায় একে অপরকে সহযোগিতা করার তৌফিক প্রদান করুন।  আমিন। </p><br>
-      <p>
-        এই বইটি আমরা যে উপায়ে সাজিয়েছি 
-        (
-        অধ্যায় ১ -ভূমিকা। 
-        অধ্যায় ২ - ব্যবসায় লেনদেনের মূলনীতি ও ধাপসমূহ।  
-        অধ্যায় ৩ - ইসলামি ব্যবসায়িক কাঠামো। 
-        অধ্যায় ৪ - বাস্তব উদাহরণ। 
-        অধ্যায় ৫ - কুরআন ও হাদিস ভিত্তিক ব্যাবসায়িক নির্দেশনা। 
-        অধ্যায় ৬ - উপসংহার। 
-        )
-      </p>
+    <h1> 
+        ইসলামি ব্যবসায়িক নির্দেশিকা
+    </h1>
 
-    </div>
-  </div>
-  <div class="chapter section">
-    <h2>📜 ০২ / ব্যবসায়িক লেনদেন এর মূলনীতি ও ধাপ সমূহ</h2>
-    <div class="highlight-box">
-      <p>ব্যবসায়ে লেনদেন হলো সেই সমস্ত ঘটনা, যা অর্থের মাপকাঠিতে পরিমাপযোগ্য এবং ব্যবসায়ের আর্থিক অবস্থার পরিবর্তন ঘটায় (যেমন: পণ্য ক্রয়-বিক্রয়, বেতন প্রদান, বিনিয়োগ ইত্যাদি)
-। ব্যবসায়ের প্রতিটি ক্ষেত্রে লেনদেনের গুরুত্ব অপরিসীম, কারণ এটি ব্যবসায়ের মূল ভিত্তি। নিচে আল কুরআন ও সহীহ হাদিস থেকে ব্যবসায়িক লেনদেন এর মূলনীতি ও ধাপ সমূহ বর্ণিত হলো :</p>
-
-    </div>
-    
-    <div class="feature-grid">
-      <div class="method-card"><i class="fas fa-box-open"></i><h3>১. হালাল পণ্যের ব্যবসা</h3><p>"নিশ্চয়ই তিনি তোমাদের জন্য মৃত প্রাণী, রক্ত, শূকরের মাংস এবং আল্লাহ ছাড়া অন্য কারো নামে উৎসর্গীকৃত পশু হারাম করেছেন।" (সূরা আন-নাহল ১৬:১১৫)<br><br>সতর্কতা: শুধুমাত্র হালাল পণ্য ও সেবার বাণিজ্য বৈধ। হারাম বস্তু (মদ, শূকর, জুয়া) নিয়ে ব্যবসা নিষিদ্ধ।</p></div>
-      <div class="method-card"><i class="fas fa-user-graduate"></i><h3>২. পণ্যের মালিকানা অথবা দায়-দায়িত্ব</h3><p>সুনানে আবু দাউদ (হাদীস ৩৫০৪) - নবী (সা.) বলেন: "তুমি যা নিজের কাছে নেই তা বিক্রি করো না।"</p><br><p>সতর্কতা: বিক্রেতার কাছে পণ্যের মালিকানা অথবা দায়-দায়িত্ব না থাকলে তা বিক্রি করা যাবে না।</p></div>
-      <div class="method-card"><i class="fas fa-balance-scale"></i><h3>৩. পণ্যের ওজন, পরিমাপ ও বিবরণ সঠিক হতে হবে</h3><p>“ওজন ও পরিমাপ পূর্ণ করো এবং মানুষকে তাদের প্রাপ্য বস্তু কম দিও না।” (সূরা আর-রহমান ৫৫:৯)</p><br><p>রাসুল (সা.) একবার একটি খাদ্যস্তূপের কাছে যান এবং ভেতরে হাত দিয়ে স্যাঁতসেঁতে ভাব পান। বিক্রেতা জানালেন বৃষ্টিতে ভিজে গেছে। তখন তিনি বললেন, ‘তুমি কেন সেটা ওপরে রাখলে না, যাতে লোকেরা দেখতে পেত? যে প্রতারণা করে, সে আমার দলভুক্ত নয়। (মুসলিম) </p><br><p>সতর্কতা: এটি সরাসরি পণ্যের ত্রুটি গোপন করে (যা ভেজালেরই একটি রূপ) প্রতারণা করাকে নিষিদ্ধ করেছে।</p></div>
-      <div class="method-card"><i class="fas fa-handshake"></i><h3>৪. পারস্পরিক সম্মতি</h3><p>“হে ঈমানদারগণ! তোমরা একে অপরের সম্পদ অন্যায়ভাবে গ্রাস করো না, তবে পারস্পরিক সম্মতিক্রমে ব্যবসার মাধ্যমে গ্রহণ করো।” (সূরা আন-নিসা ৪:২৯)</p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন পারস্পরিক সম্মতিতে করতে হবে।</p></div>
-      <div class="method-card"><i class="fas fa-file-signature"></i><h3>৫. লেনদেন, চুক্তি ও ঋণ লিপিবদ্ধ করা</h3><p>“যখন তোমরা কোনো নির্দিষ্ট সময়ের জন্য ঋণের লেনদেন কর, তখন তা লিখে রাখো।  (সূরা আল-বাকারা ২:২৮২)। </p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন, চুক্তি(সওদা) ও ঋণ লিপিবদ্ধ রাখা।</p></div>
-      <div class="method-card"><i class="fas fa-shield-alt"></i><h3>৬. চুক্তির প্রতিশ্রুতি রক্ষা করা</h3><p>“হে ঈমানদারগণ! তোমরা চুক্তি পূর্ণ করো।” (সূরা মায়িদাহ ৫:১)। </p><br><p>সতর্কতা: ব্যবসায় প্রতিশ্রুতি রক্ষা করা ইমানের অংশ।</p></div>
-      
+    <div class="hadith">
+        <i class="fas fa-quote-left"></i>হালাল উপার্জনের সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ।<i class="fas fa-quote-right"></i>
+        <span style="display: block; margin-top: 6px; font-size: 0.9rem;">(আল-বায়হাকী, শুয়াবুল ঈমান)</span>
     </div>
 
-    <p><strong>উপসংহারে:</strong> কুরআন-হাদীস ভিত্তিক লেনদেনের এই মূলনীতি মেনে চললেই ব্যবসা ও বিনিয়োগ হবে বরকতময় ও দুনিয়া-আখিরাতে সফলতার মাধ্যম।</p>
-  </div>
-  <!-- CHAPTER 03: HALAL PRINCIPLES, QURAN & HADITH -->
-  <div class="chapter section">
-    <h2>📜 ০৩ / ব্যবসায়িক কাঠামো</h2>
-    <div class="highlight-box">
-      <p>ইসলামি শরিয়াহ সম্মত মৌলিক ব্যবসায়িক কাঠামো তিনটি – বাই (ক্রয়-বিক্রয়), শেয়ার (অংশীদারিত্ব) ও ইজারা (লিজ) – এর মাধ্যমে হালাল ও নৈতিক বাণিজ্যের ভিত্তি গড়ে ওঠে। নিচে বাই, শেয়ার ও ইজারার পূর্ণ বিশ্লেষণ দেওয়া হলো।</p>
-    </div>
-  </div>
-  <!-- ========== CHAPTER 2: বাই (ক্রয়-বিক্রয়) ========== -->
-  <div class="chapter section">
-    <h2>📖 ০৩.১ বাই (ক্রয়-বিক্রয়)</h2>
-    <p>ইসলামী আইনে বাই মানে বৈধ বিনিময়। পণ্য ও মূল্যের বিনিময় নির্দিষ্ট শর্তে সম্পন্ন হয়। নিচে পাঁচটি প্রধান শাখা ও তাদের প্রয়োগক্ষেত্র তুলে ধরা হলো।</p>
-    <div class="feature-grid">
-      <div class="method-card"><i class="fas fa-hand-holding-usd"></i><h3>বাই-মুয়াজ্জাল</h3><p>পণ্য হস্তান্তর এখনই, মূল্য পরে কিস্তিতে বা এককালীন।</p><span class="sector-tag">ইলেকট্রনিক্স, গাড়ি, আসবাব</span></div>
-      <div class="method-card"><i class="fas fa-boxes"></i><h3>বাই-ইস্তিজরার</h3><p>নির্দিষ্ট মেয়াদে বারবার পণ্য সরবরাহ, বিল একত্রে পরে প্রদান।</p><span class="sector-tag">কাঁচামাল, স্টেশনারি, জ্বালানি</span></div>
-      <div class="method-card"><i class="fas fa-seedling"></i><h3>বাই-সালাম</h3><p>সম্পূর্ণ মূল্য অগ্রিম, পণ্য ভবিষ্যতে হস্তান্তর (কৃষি ও কাঁচামাল)।</p><span class="sector-tag">ধান, গম, পাট, ফল</span></div>
-      <div class="method-card"><i class="fas fa-industry"></i><h3>বাই-ইস্তিসনা</h3><p>অর্ডার ভিত্তিক উৎপাদন চুক্তি (জাহাজ, ফ্ল্যাট, মেশিনারি)।</p><span class="sector-tag">নির্মাণ, যন্ত্রপাতি, সফটওয়্যার</span></div>
-      <div class="method-card"><i class="fas fa-coins"></i><h3>বাই-আস-সারফ</h3><p>স্বর্ণ, রৌপ্য ও মুদ্রার হাতে-হাতে বিনিময় (সম মূল্য ও তাৎক্ষণিক)।</p><span class="sector-tag">ডলার, স্বর্ণ, বৈদেশিক মুদ্রা</span></div>
-    </div>
-    <p><strong>উপযুক্ত খাতসমূহ:</strong> মুয়াজ্জাল: টিভি, ফ্রিজ, মোবাইল, ল্যাপটপ, মোটরসাইকেল, গাড়ি, আসবাব, কৃষি যন্ত্র, রান্নাঘর সরঞ্জাম। ইস্তিজরার: ময়দা, অফিস কলম, ইট, সার, ওষুধ, জ্বালানি, পাঠ্যবই, লিনেন, কাঁচামাল। সালাম: ধান, গম, পাট, আখ, তেলবীজ, আলু, পেঁয়াজ, আম, মাছ। ইস্তিসনা: ফ্ল্যাট, সেতু, মেশিনারি, জাহাজ, বিমান যন্ত্রাংশ, কাস্টম সফটওয়্যার, প্রিফেব বাড়ি, এমআরআই, ট্রলার। সারফ: ডলার, ইউরো, স্বর্ণালংকার, রূপা, প্লাটিনাম, ট্রাভেলার্স চেক, রেমিট্যান্স, পুরাতন স্বর্ণ বদলি, বৈদেশিক মুদ্রা।</p>
-  </div>
-
-  <!-- CHAPTER 3: শেয়ার -->
-  <div class="chapter section">
-    <h2>🤝 ০৩.২ শেয়ার (অংশীদারিত্ব) — মুদারাবা ও মুশারাকা</h2>
-    <p>ইসলামী অর্থব্যবস্থায় অংশীদারিত্ব ভিত্তিক লাভ-লোকসান ভাগাভাগি ন্যায়ের ভিত্তি।</p>
-    <div class="feature-grid">
-      <div class="method-card"><i class="fas fa-chart-pie"></i><h3>মুদারাবা</h3><p>বিনিয়োগকারী মূলধন দেন, উদ্যোক্তা পরিচালনা করেন। লাভ পূর্বনির্ধারিত অনুপাতে, লোকসান শুধু বিনিয়োগকারীর।</p></div>
-      <div class="method-card"><i class="fas fa-handshake"></i><h3>মুশারাকা</h3><p>সকল অংশীদার মূলধন ও ঐচ্ছিকভাবে শ্রম দেন। লাভ-লোকসান মূলধন বা চুক্তি অনুযায়ী।</p></div>
-    </div>
-    <div class="examples-grid">
-      <div class="ex-card"><strong>📌 মুদারাবা:</strong> করিম ১০ লক্ষ টাকা, রানা ব্যবসা; লাভ ৬০:৪০।</div>
-      <div class="ex-card"><strong>📌 মুদারাবা:</strong> ৫০ লক্ষ টাকার ইনভেস্টমেন্ট ফান্ড — পরিচালক ২০% ফি।</div>
-      <div class="ex-card"><strong>📌 মুশারাকা:</strong> তিন বন্ধু ৫০:৩০:২০ অনুপাতে কারখানা।</div>
-      <div class="ex-card"><strong>📌 মুশারাকা:</strong> ৬০ লক্ষ টাকার প্লট উন্নয়ন ৫০:৫০ অংশীদারিত্বে।</div>
-    </div>
-    <p><strong>উপযুক্ত ক্ষেত্রসমূহ:</strong> মুদারাবা: প্রযুক্তি স্টার্টআপ, ই-কমার্স, কৃষি, মাছ চাষ, হস্তশিল্প, ফার্মা গবেষণা, পরিবহন, রিয়েল এস্টেট, পোল্ট্রি। মুশারাকা: সিমেন্ট শিল্প, জয়েন্ট ভেঞ্চার, বিদ্যুৎ প্লান্ট, শিপিং লাইন, ডায়াগনস্টিক সেন্টার, স্কুল-কলেজ, হোটেল, এগ্রো প্রসেসিং, লজিস্টিকস।</p>
-  </div>
-
-  <!-- CHAPTER 4: ইজারা -->
-  <div class="chapter section">
-    <h2>📋 ০৩.৩ ইজারা (লিজ) ও হায়ার পারচেজ</h2>
-    <p>ইজারা হচ্ছে সম্পদের ভাড়া। ইসলামী ইজারায় মালিকানা বিনিয়োগকারীর থাকে। শিরকাতুল মিল্কের মাধ্যমে হায়ার পারচেজ পদ্ধতি যৌথ মালিকানায় ক্রমশ মালিকানা অর্জন করে।</p>
-    <div class="feature-grid">
-      <div class="method-card"><i class="fas fa-home"></i><h3>শিরকাতুল মিল্ক / হায়ার পারচেজ</h3><p>যৌথ মালিকানায় সম্পদ; ভাড়াটিয়া মাসিক ভাড়া ও অতিরিক্ত কিস্তি দিয়ে অংশ ক্রয় করে।</p></div>
-    </div>
-    <div class="examples-grid">
-      <div class="ex-card"><strong>🏠 আবাসন:</strong> ২৫ লক্ষ ফ্ল্যাট; মাসিক ১৫,০০০ ভাড়া + ৫,০০০ ক্রয় কিস্তি।</div>
-      <div class="ex-card"><strong>🚗 গাড়ি:</strong> ৮ লক্ষ গাড়ি; মাসিক ১০,০০০ ভাড়া + ৪,০০০ ক্রয়।</div>
-      <div class="ex-card"><strong>🏗️ যন্ত্রপাতি:</strong> ১৫ লক্ষ এক্সকাভেটর; মাসিক ২০,০০০ ভাড়া + ১০,০০০ ক্রয়।</div>
-      <div class="ex-card"><strong>🩺 এমআরআই:</strong> ২০ লক্ষ মেশিন; মাসিক ২৫,০০০ ভাড়া + ১৫,০০০ ক্রয়।</div>
-    </div>
-    <p><strong>প্রয়োগক্ষেত্র (৯টি):</strong> ফ্ল্যাট, ব্যক্তিগত গাড়ি, বাণিজ্যিক যান (ট্রাক, বাস), কৃষি যন্ত্র, নির্মাণ সরঞ্জাম, অফিস ফার্নিচার, আইটি সার্ভার, চিকিৎসা যন্ত্রপাতি, জাহাজ ও বিমান লিজিং।</p>
-  </div>
-
-  <!-- CHAPTER 5: 72 উদাহরণ -->
-  <div class="chapter section">
-    <h2>💎 ০৪ / বাস্তব উদাহরণ</h2>
-    <p>প্রতিটি পদ্ধতির জন্য বাস্তব লেনদেনের নমুনা নিচে দেওয়া হলো।</p>
-    <div class="examples-grid">
-      <div class="ex-card"><strong>বাই-মুয়াজ্জাল:</strong> ৪৫,০০০ টাকার টিভি, ১০ মাস ৪,৫০০/মাস</div>
-      <div class="ex-card"><strong>বাই-মুয়াজ্জাল:</strong> ১,২০,০০০ টাকার মোটরসাইকেল, ১২ মাস ১০,০০০/মাস</div>
-      <div class="ex-card"><strong>বাই-ইস্তিজরার:</strong> সাপ্তাহিক ৫০ কেজি ময়দা @৪৫; বছর শেষে ১,১৭,০০০</div>
-      <div class="ex-card"><strong>বাই-সালাম:</strong> ১০০০ কেজি ধানের অগ্রিম ৩০,০০০ টাকা</div>
-      <div class="ex-card"><strong>বাই-ইস্তিসনা:</strong> ২০ লক্ষ টাকার ফ্ল্যাট নির্মাণ, অগ্রিম ৫ লক্ষ</div>
-      <div class="ex-card"><strong>বাই-আস-সারফ:</strong> ১০০০ ডলার = ১,১০,০০০ টাকা তাৎক্ষণিক</div>
-      <div class="ex-card"><strong>মুদারাবা:</strong> করিম ১০ লক্ষ, লাভ ৬০:৪০</div>
-      <div class="ex-card"><strong>মুশারাকা:</strong> তিন বন্ধু ১ কোটি টাকার সিমেন্ট কারখানা</div>
-      <div class="ex-card"><strong>হায়ার পারচেজ:</strong> ২৫ লক্ষ ফ্ল্যাট, মাসিক ২০,০০০ (ভাড়া+ক্রয়)</div>
-      <div class="ex-card"><strong>সালাম (আম):</strong> ১০০০ কেজি আমের অগ্রিম ৫০,০০০ টাকা</div>
-      <div class="ex-card"><strong>ইস্তিজরার (ওষুধ):</strong> মাসিক ১০,০০০, ছয়মাসে ৬০,০০০</div>
-      <div class="ex-card"><strong>মুদারাবা (মাছ চাষ):</strong> ৩ লক্ষ টাকা, লাভ ৫০:৫০</div>
-      <div class="ex-card"><strong>হায়ার পারচেজ (ট্রাক):</strong> ১২ লক্ষ ট্রাক, মাসিক ১৮,০০০</div>
-      <div class="ex-card"><strong>সারফ (স্বর্ণ):</strong> ১ ভরি পুরাতন + ২,০০০ = ১ ভরি নতুন</div>
-    </div>
-    <p><i class="fas fa-check-circle"></i> উপরে প্রতিটি পদ্ধতির অধীনে লেনদেন প্রয়োগযোগ্য।</p>
-  </div>
-
-  <div class="chapter section">
-    <h2>📜 ০৫ / কুরআন ও হাদিস ভিত্তিক ব্যবসায়িক নির্দেশনা</h2>
-    <p>ইসলামে উপার্জন ও জীবিকার ক্ষেত্রে হালাল-হারামের সীমারেখা স্পষ্ট। মহান আল্লাহ ও তাঁর রাসূল ﷺ পরিষ্কার দিকনির্দেশনা দিয়েছেন। নিচে কুরআনের আয়াত ও সহীহ হাদীসের আলোকে ব্যবসায়িক নির্দেশনা তুলে ধরা হলো।</p>
-
-    <h3 style="font-size: 1.8rem; margin: 2rem 0 0.5rem;"><i class="fas fa-hadith"></i> আল কুরআন থেকে নির্দেশনা</h3>
-    <!-- কুরআনের আয়াত গ্রিড -->
-    <div class="quran-grid">
-      <div class="verse-card">
-        <div class="arabic">يَا أَيُّهَا الَّذِينَ آمَنُوا كُلُوا مِن طَيِّبَاتِ مَا رَزَقْنَاكُمْ</div>
-        <div class="reference">সূরা আল-বাকারাহ (২:১৭২)</div>
-        <p><strong>অর্থ:</strong> "হে ঈমানদারগণ! আমি তোমাদের যে উত্তম রিজিক দান করেছি, তা থেকে খাও।"</p>
-        <p class="sector-tag">হালাল রিজিকের আদেশ</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا</div>
-        <div class="reference">সূরা আল-বাকারাহ (২:২৭৫)</div>
-        <p><strong>অর্থ:</strong> "আল্লাহ ব্যবসা-বাণিজ্য হালাল করেছেন এবং সুদকে হারাম করেছেন।"</p>
-        <p class="sector-tag">ব্যবসার বৈধতা ও সুদের নিষেধাজ্ঞা</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا</div>
-        <div class="reference">সূরা আল-বাকারাহ (২:২৭৬)</div>
-        <p><strong>অর্থ:</strong> "আল্লাহ সুদকে ধ্বংস করেন এবং দান-খয়রাতকে বৃদ্ধি করেন। আর আল্লাহ কোনো অকৃতজ্ঞ পাপীকে পছন্দ করেন না।"</p>
-        <p class="sector-tag">ব্যবসার বৈধতা ও সুদের নিষেধাজ্ঞা</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا</div>
-        <div class="reference">সূরা আল-বাকারাহ (২:২৭৮-২৭৯)</div>
-        <p><strong>অর্থ:</strong> "হে ঈমানদারগণ! তোমরা আল্লাহকে ভয় কর এবং সুদের যা বাকি আছে তা ছেড়ে দাও, যদি তোমরা সত্যিই মুমিন হও। আর যদি তা না করো, তাহলে আল্লাহ ও তাঁর রাসূলের পক্ষ থেকে যুদ্ধের ঘোষণা জেনে রেখো।"</p>
-        <p class="sector-tag">ব্যবসার বৈধতা ও সুদের নিষেধাজ্ঞা</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَأَحَلَّ اللَّهُ الْبَيْعَ وَحَرَّمَ الرِّبَا</div>
-        <div class="reference">সূরা আল-বাকারা (২:২৮২)</div>
-        <p><strong>অর্থ:</strong> "যখন তোমরা কোনো নির্দিষ্ট সময়ের জন্য ঋণের লেনদেন কর, তখন তা লিখে রাখো।"</p>
-        <p class="sector-tag">ঋণ ও লেনদেন লিখিতভাবে</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ</div>
-        <div class="reference">সূরা আল-মায়িদাহ (৫:২)</div>
-        <p><strong>অর্থ:</strong> "সৎকর্ম ও তাকওয়ার বিষয়ে পরস্পর সহযোগিতা করো, আর পাপ ও সীমালঙ্ঘনের বিষয়ে সহযোগিতা করো না।"</p>
-        <p class="sector-tag">হালাল উদ্যোগে সহযোগিতা</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ وَلَا تَعَاوَنُوا عَلَى الْإِثْمِ وَالْعُدْوَانِ</div>
-        <div class="reference">সূরা আল-মায়িদাহ (৫:৯০)</div>
-        <p><strong>অর্থ:</strong> "হে মুমিনগণ! মদ, জুয়া, মূর্তিপূজার বেদী ও ভাগ্য নির্ধারক তীর ঘৃণ্য শয়তানি কাজ। সুতরাং তোমরা তা পরিহার করো।"</p>
-        <p class="sector-tag">হালাল উদ্যোগে সহযোগিতা</p>
-      </div>
-      <div class="verse-card">
-        <div class="arabic">إِنَّمَا حَرَّمَ عَلَيْكُمُ الْمَيْتَةَ وَالدَّمَ وَلَحْمَ الْخِنزِيرِ وَمَا أُهِلَّ بِهِ لِغَيْرِ اللَّهِ</div>
-        <div class="reference">সূরা আন-নাহল (১৬:১১৫)</div>
-        <p><strong>অর্থ:</strong> "নিশ্চয়ই তিনি তোমাদের জন্য মৃত প্রাণী, রক্ত, শূকরের মাংস এবং আল্লাহ ছাড়া অন্য কারো নামে উৎসর্গীকৃত পশু হারাম করেছেন।"</p>
-        <p class="sector-tag">হারামের স্পষ্ট ঘোষণা</p>
-      </div>
+    <!-- Action Buttons -->
+    <div class="button-group">
+        <a class="btn btn-download" href="https://ababilitworld.github.io/islami-business-guide/asset/docs/ইসলামি ব্যবসায়িক নির্দেশিকা.pdf" target="_blank">
+            <i class="fas fa-download"></i> PDF ডাউনলোড
+        </a>
+        <a class="btn btn-read" href="https://drive.google.com/file/d/1-qBCPBOVKms-UgMcPDBzQSLogYvT3Wcp/view?usp=drive_link" target="_blank">
+            <i class="fas fa-book"></i> গুগল ড্রাইভে পড়ুন
+        </a>
     </div>
 
-    <!-- সহীহ হাদীস গ্রিড -->
-    <h3 style="font-size: 1.8rem; margin: 2rem 0 0.5rem;"><i class="fas fa-hadith"></i> সহীহ হাদীস থেকে দলিল</h3>
-    <div class="hadith-grid">
-      <div class="hadith-card">
-        <div class="hadith-text">“নিশ্চয় আল্লাহ পবিত্র, তিনি পবিত্র বস্তু ছাড়া গ্রহণ করেন না। আর তিনি মুমিনদেরকে যা আদেশ করেছেন, তা রাসূলগণকেও আদেশ করেছেন: 'হে রাসূলগণ! পবিত্র বস্তু থেকে আহার করো এবং সৎকর্ম করো।' অতঃপর তিনি এমন এক ব্যক্তির কথা উল্লেখ করলেন, যে দীর্ঘ সফর শেষে ধূলিমলিন অবস্থায় আকাশের দিকে হাত তুলে আল্লাহর কাছে প্রার্থনা করে, অথচ 'তার খাদ্য হারাম, পানীয় হারাম, পোশাক-পরিচ্ছদ হারাম এবং সে হারাম দিয়েই প্রতিপালিত। কাজেই কীভাবে তার দো‘আ কবুল হবে!'”</div>
-        <div class="reference">(সহীহ মুসলিম, হাদীস নং ১০১৫)</div>
-        <p><strong>উপদেশ:</strong> উপার্জন ও খাদ্য, পানীয়, পোশাক-পরিচ্ছদ হালাল হওয়া আবশ্যক, যা দোআ কবুলের অন্যতম প্রধান শর্ত ।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“হালাল রুজির সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ।”</div>
-        <div class="reference">(আল-বায়হাকী, শুয়াবুল ঈমান)</div>
-        <p><strong>উপদেশ:</strong> হালাল উপার্জন অর্জন করা ফরজে আইন।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“উত্তম উপার্জন হল একজন ব্যক্তির নিজ হাতের উপার্জন এবং প্রতিটি বৈধ ব্যবসায়ের উপার্জন।”</div>
-        <div class="reference">(মুসনাদে আহমাদ)</div>
-        <p><strong>উপদেশ:</strong> ব্যবসা উত্তম উপার্জনের মাধ্যম</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“তোমরা ব্যবসা কর, কেননা রিযিকের নয়-দশমাংশই ব্যবসায় নিহিত।”</div>
-        <div class="reference">(সুনান সাঈদ ইবনে মানসুর, আল-জামি আস-সাগির, ইসলাহ আল-মাল)</div>
-        <p><strong>উপদেশ:</strong> ব্যবসা উত্তম উপার্জনের মাধ্যম</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“সৎ ও আমানতদার ব্যবসায়ী কিয়ামতের দিন নবী, সত্যবাদী ও শহীদদের সঙ্গে থাকবে।”</div>
-        <div class="reference">(তিরমিজি, হাদিস নং ১২০৯)</div>
-        <p><strong>উপদেশ:</strong> ব্যবসায়ীদেরকে সৎ ও আমানতদার হওয়ার নির্দেশ দেয়া হয়েছে।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“যে ব্যক্তি হালাল উপার্জন করে এবং তা নিজের পরিবারে ব্যয় করে, সে দানকারীর সমান সওয়াব পায়।”</div>
-        <div class="reference">(সহীহ ইবন হিব্বান, ৩৩১৯)</div>
-        <p><strong>উপদেশ:</strong> হালাল রুজি পরিবারে ব্যয় করাও ইবাদত।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“রাসূলুল্লাহ (সা.) সুদ গ্রহীতা, প্রদানকারী, লেখক ও সাক্ষীকে অভিশাপ দিয়েছেন।”</div>
-        <div class="reference">(সহীহ মুসলিম, হাদীস নং ১৫৩৪)</div>
-        <p><strong>সতর্কতা:</strong> যুগে যুগে হারামের ব্যাপারে উদাসীনতা বাড়বে, তাই সচেতন থাকা জরুরি।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“নবী (সা.) অনিশ্চিত লেনদেন (বাই‘উল-ঘরার) নিষেধ করেছেন।”</div>
-        <div class="reference">(সহীহ মুসলিম, হাদীস নং ১৫১৩)</div>
-        <p><strong>সতর্কতা:</strong> যুগে যুগে হারামের ব্যাপারে উদাসীনতা বাড়বে, তাই সচেতন থাকা জরুরি।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“এক সময় আসবে যখন মানুষ তার উপার্জন হালাল থেকে পাবে নাকি হারাম থেকে তা মোটেও খেয়াল করবে না।”</div>
-        <div class="reference">(সহীহ বুখারী, হাদীস নং ২০৫৯)</div>
-        <p><strong>সতর্কতা:</strong> যুগে যুগে হারামের ব্যাপারে উদাসীনতা বাড়বে, তাই সচেতন থাকা জরুরি।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“নিশ্চয় কেয়ামতের দিন ব্যবসায়ীদের মহাপাপীরূপে ওঠানো হবে, তবে যারা সততার সঙ্গে ব্যবসা পরিচালনা করেছে তারা ছাড়া।”</div>
-        <div class="reference">(তিরমিজি, হাদিস নং ১২১০)</div>
-        <p><strong>সতর্কতা:</strong> যুগে যুগে হারামের ব্যাপারে উদাসীনতা বাড়বে, তাই সচেতন থাকা জরুরি।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“রাসুল (সা.) একবার একটি খাদ্যস্তূপের কাছে যান এবং ভেতরে হাত দিয়ে স্যাঁতসেঁতে ভাব পান। বিক্রেতা জানালেন বৃষ্টিতে ভিজে গেছে। তখন তিনি বললেন, ‘তুমি কেন সেটা ওপরে রাখলে না, যাতে লোকেরা দেখতে পেত? যে প্রতারণা করে, সে আমার দলভুক্ত নয়।”</div>
-        <div class="reference">(মুসলিম)</div>
-        <p><strong>সতর্কতা:</strong> এটি সরাসরি পণ্যের ত্রুটি গোপন করে (যা ভেজালেরই একটি রূপ) প্রতারণা করাকে নিষিদ্ধ করেছে।</p>
-      </div>
-      <div class="hadith-card">
-        <div class="hadith-text">“যে জাতিই মাপ ও ওজনে কম দেবে, সে জাতিই দুর্ভিক্ষ, কঠিন খাদ্য-সংকট এবং শাসকগোষ্ঠীর অত্যাচারের শিকার হবে।”</div>
-        <div class="reference">(ইবনে মাজাহ, হাদিস নং ২২৪৭)</div>
-        <p><strong>সতর্কতা:</strong> যুগে যুগে হারামের ব্যাপারে উদাসীনতা বাড়বে, তাই সচেতন থাকা জরুরি।</p>
-      </div>
+    <div class="footer">
+        <span><i class="fas fa-envelope"></i>  islamiwayresearchteam@gmail.com</span><br>
+        <span style="font-size: 0.7rem;">ইসলামের সরল পথ । ইসলামী ওয়ে রিসার্চ টিম</span>
     </div>
-  </div>
-
-  <!-- CONCLUSION -->
-  <div class="chapter section">
-    <h2 style="font-size: 2rem;">📌 ০৬ / উপসংহার: আপনার হালাল রোডম্যাপ</h2>
-    <p>কুরআন-হাদীসের নির্দেশনা অনুসরণ করে বাই, শেয়ার ও ইজারা-ভিত্তিক লেনদেনই প্রকৃত সফলতার পথ। প্রতিটি মুসলিমের কর্তব্য হালাল আয় অর্জন করা এবং হারাম বর্জন করা। এই ইবুকের মূলনীতি ও উদাহরণ অনুসরণ করলে দুনিয়া ও আখিরাতে কল্যাণ নিশ্চিত হবে ইনশাআল্লাহ।</p>
-    <div class="author-grid">
-      <div style="background: var(--gold-light); border-radius: 50%; width: 100px; height: 100px; display: flex; align-items: center; justify-content: center; margin: 0 auto;"><i class="fas fa-user-graduate fa-3x" style="color: var(--primary);"></i></div>
-      <div><strong>ইসলামের সরল পথ | ইসলামী ওয়ে রিসার্চ টিম</strong> — তথ্যসমূহ কুরআন ও সহীহ হাদীসের আলোকে গৃহীত। <br> <i class="fas fa-envelope"></i> islamiwayresearchteam@gmail.com</div>
-    </div>
-    <div style="background: #e8f0e6; border-radius: 28px; padding: 1.5rem; text-align: center;">
-      <strong>বোনাস:</strong> শরিয়াহ কমপ্লায়েন্ট ব্যবসায়িক টেমপ্লেট ও A4 প্রিন্ট-অপ্টিমাইজড ইবুক ।
-    </div>
-  </div>
-
-  <div style="text-align: center; padding: 1.5rem; font-size: 0.75rem; border-top: 1px solid #e2d8ce;">
-    © ২০২৬ — ইসলামি ব্যবসায়িক নির্দেশিকা : (ক্রয়-বিক্রয়, শেয়ার, ইজারা) | কুরআন-হাদীস ভিত্তিক | A4 প্রিন্ট-অপ্টিমাইজড ইবুক 
-  </div>
 </div>
 
-<script>
-  document.getElementById('printEbookBtn')?.addEventListener('click', () => window.print());
-</script>
 </body>
 </html>
