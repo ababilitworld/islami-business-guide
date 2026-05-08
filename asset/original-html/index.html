@@ -64,13 +64,11 @@
       break-after: page;
     }
     .cover-photo {
-        break-inside: avoid;
-        page-break-inside: avoid;
-        page-break-after: always;
-        break-after: page;
-      }
+      width: 100%;
+      padding: 1.5rem;
+    }
     .cover-photo img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -297,13 +295,15 @@
         print-color-adjust: exact;
       }
       .cover-photo {
+        width: 100%;
+        padding: 1.5rem;
         break-inside: avoid;
         page-break-inside: avoid;
         page-break-after: always;
         break-after: page;
       }
       .cover-photo img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -402,13 +402,24 @@
         var protocol = window.location.protocol; // "http:" or "https:"
         var hostname = window.location.hostname;       
         var imagePath = protocol + '//' + hostname + '/ai/islami-business-guide/asset/docs/cover-vertical.jpg';
-        document.getElementById('coverImg').src = imagePath;
+        var imgElement = document.getElementById('coverImg');
+        if (imgElement) {
+            imgElement.src = imagePath;
+            // Ensure on‑screen and print width
+            imgElement.style.width = '100%';
+            
+            // Additional print guarantee (prevents override by print stylesheets)
+            var printStyle = document.createElement('style');
+            printStyle.media = 'print';
+            printStyle.innerHTML = '#coverImg { width: 100% !important; }';
+            document.head.appendChild(printStyle);
+        }
     </script>
     <div class="cover-details">
       <div class="badge"><i class="fas fa-star-of-life"></i> শরিয়াহ সম্মত <i class="fas fa-star-of-life"></i></div>
       <h1>ইসলামি ব্যবসায়িক নির্দেশিকা:<br>ক্রয়-বিক্রয়, শেয়ার, ইজারা</h1>
       <div class="sub">হালাল ব্যবসার ত্রিমাত্রিক কাঠামো</div>
-      <div style="margin-top: 2rem;"> কুরআন-হাদীসের দলিল | ৩ টি মোড ও ৮টি উপ-পদ্ধতি | বাস্তব উদাহরণ </div>
+      <div style="margin-top: 2rem;"> ৩ টি মোড ও ৮টি উপ-পদ্ধতি | বাস্তব উদাহরণ | কুরআন-হাদীসের দলিল </div>
       <div style="margin-top: 3rem; font-size: 0.85rem;">ইসলামের সরল পথ | ইসলামী ওয়ে রিসার্চ টিম</div>
       
     </div>
@@ -419,7 +430,7 @@
   <div class="section" style="background: #fffbf5;">
     <h2 style="font-size: 2rem; border-left: none; text-align: center;"><i class="fas fa-list-ul"></i> সূচিপত্র</h2>
     <div class="toc-grid">
-      <div class="toc-card"><span class="chap-num">০১</span><br><strong>ভূমিকা</strong><br>কুরআন ও হাদীস ভিত্তিক মৌলিক নীতিমালা</div>
+      <div class="toc-card"><span class="chap-num">০১</span><br><strong>ভূমিকা</strong><br>হালাল উপার্জন এর প্রয়োজনীয়তা</div>
       <div class="toc-card"><span class="chap-num">০২</span><br><strong>ব্যবসায়িক লেনদেন এর মূলনীতি ও ধাপ সমূহ</strong><br>কুরআন ও হাদীস ভিত্তিক মৌলিক নীতিমালা</div>
       <div class="toc-card"><span class="chap-num">০৩</span><br><strong>ব্যবসায়িক কাঠামো</strong><br>ইসলামি শরিয়াহ সম্মত ব্যবসায়িক কাঠামো</div>
       <div class="toc-card"><span class="chap-num">০৪</span><br><strong>বাস্তব উদাহরণ</strong><br>সকল খাত ও পদ্ধতি কভারেজ</div>
@@ -471,12 +482,12 @@
     </div>
     
     <div class="feature-grid">
-      <div class="method-card"><i class="fas fa-box-open"></i><h3>১. হালাল পণ্যের ব্যবসা</h3><p>"নিশ্চয়ই তিনি তোমাদের জন্য মৃত প্রাণী, রক্ত, শূকরের মাংস এবং আল্লাহ ছাড়া অন্য কারো নামে উৎসর্গীকৃত পশু হারাম করেছেন।" (সূরা আন-নাহল ১৬:১১৫)<br><br>সতর্কতা: শুধুমাত্র হালাল পণ্য ও সেবার বাণিজ্য বৈধ। হারাম বস্তু (মদ, শূকর, জুয়া) নিয়ে ব্যবসা নিষিদ্ধ।</p></div>
-      <div class="method-card"><i class="fas fa-user-graduate"></i><h3>২. পণ্যের মালিকানা অথবা দায়-দায়িত্ব</h3><p>সুনানে আবু দাউদ (হাদীস ৩৫০৪) - নবী (সা.) বলেন: "তুমি যা নিজের কাছে নেই তা বিক্রি করো না।"</p><br><p>সতর্কতা: বিক্রেতার কাছে পণ্যের মালিকানা অথবা দায়-দায়িত্ব না থাকলে তা বিক্রি করা যাবে না।</p></div>
-      <div class="method-card"><i class="fas fa-balance-scale"></i><h3>৩. পণ্যের ওজন, পরিমাপ ও বিবরণ সঠিক হতে হবে</h3><p>“ওজন ও পরিমাপ পূর্ণ করো এবং মানুষকে তাদের প্রাপ্য বস্তু কম দিও না।” (সূরা আর-রহমান ৫৫:৯)</p><br><p>রাসুল (সা.) একবার একটি খাদ্যস্তূপের কাছে যান এবং ভেতরে হাত দিয়ে স্যাঁতসেঁতে ভাব পান। বিক্রেতা জানালেন বৃষ্টিতে ভিজে গেছে। তখন তিনি বললেন, ‘তুমি কেন সেটা ওপরে রাখলে না, যাতে লোকেরা দেখতে পেত? যে প্রতারণা করে, সে আমার দলভুক্ত নয়। (মুসলিম) </p><br><p>সতর্কতা: এটি সরাসরি পণ্যের ত্রুটি গোপন করে (যা ভেজালেরই একটি রূপ) প্রতারণা করাকে নিষিদ্ধ করেছে।</p></div>
-      <div class="method-card"><i class="fas fa-handshake"></i><h3>৪. পারস্পরিক সম্মতি</h3><p>“হে ঈমানদারগণ! তোমরা একে অপরের সম্পদ অন্যায়ভাবে গ্রাস করো না, তবে পারস্পরিক সম্মতিক্রমে ব্যবসার মাধ্যমে গ্রহণ করো।” (সূরা আন-নিসা ৪:২৯)</p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন পারস্পরিক সম্মতিতে করতে হবে।</p></div>
-      <div class="method-card"><i class="fas fa-file-signature"></i><h3>৫. লেনদেন, চুক্তি ও ঋণ লিপিবদ্ধ করা</h3><p>“যখন তোমরা কোনো নির্দিষ্ট সময়ের জন্য ঋণের লেনদেন কর, তখন তা লিখে রাখো।  (সূরা আল-বাকারা ২:২৮২)। </p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন, চুক্তি(সওদা) ও ঋণ লিপিবদ্ধ রাখা।</p></div>
-      <div class="method-card"><i class="fas fa-shield-alt"></i><h3>৬. চুক্তির প্রতিশ্রুতি রক্ষা করা</h3><p>“হে ঈমানদারগণ! তোমরা চুক্তি পূর্ণ করো।” (সূরা মায়িদাহ ৫:১)। </p><br><p>সতর্কতা: ব্যবসায় প্রতিশ্রুতি রক্ষা করা ইমানের অংশ।</p></div>
+      <div class="method-card"><i class="fas fa-box-open"></i><h3>১. ব্যবসায়িক পণ্য হালাল হতে হবে।</h3><p>"নিশ্চয়ই তিনি তোমাদের জন্য মৃত প্রাণী, রক্ত, শূকরের মাংস এবং আল্লাহ ছাড়া অন্য কারো নামে উৎসর্গীকৃত পশু হারাম করেছেন।" (সূরা আন-নাহল ১৬:১১৫)<br><br>সতর্কতা: শুধুমাত্র হালাল পণ্য ও সেবার বাণিজ্য বৈধ। হারাম বস্তু (মদ, শূকর, জুয়া) নিয়ে ব্যবসা নিষিদ্ধ।</p></div>
+      <div class="method-card"><i class="fas fa-user-graduate"></i><h3>২. ব্যবসায়িক পণ্যের মালিকানা অথবা দায়-দায়িত্ব</h3><p>সুনানে আবু দাউদ (হাদীস ৩৫০৪) - নবী (সা.) বলেন: "তুমি যা নিজের কাছে নেই তা বিক্রি করো না।"</p><br><p>সতর্কতা: বিক্রেতার কাছে পণ্যের মালিকানা অথবা দায়-দায়িত্ব না থাকলে তা বিক্রি করা যাবে না।</p></div>
+      <div class="method-card"><i class="fas fa-balance-scale"></i><h3>৩. ব্যবসায়িক পণ্যের ওজন, পরিমাপ ও পণ্যের বিবরণ সঠিক হতে হবে</h3><p>“ওজন ও পরিমাপ পূর্ণ করো এবং মানুষকে তাদের প্রাপ্য বস্তু কম দিও না।” (সূরা আর-রহমান ৫৫:৯)</p><br><p>রাসুল (সা.) একবার একটি খাদ্যস্তূপের কাছে যান এবং ভেতরে হাত দিয়ে স্যাঁতসেঁতে ভাব পান। বিক্রেতা জানালেন বৃষ্টিতে ভিজে গেছে। তখন তিনি বললেন, ‘তুমি কেন সেটা ওপরে রাখলে না, যাতে লোকেরা দেখতে পেত? যে প্রতারণা করে, সে আমার দলভুক্ত নয়। (মুসলিম) </p><br><p>সতর্কতা: এটি সরাসরি পণ্যের ত্রুটি গোপন করে (যা ভেজালেরই একটি রূপ) প্রতারণা করাকে নিষিদ্ধ করেছে।</p></div>
+      <div class="method-card"><i class="fas fa-handshake"></i><h3>৪. ব্যবসায়িক লেনদেনে পারস্পরিক সম্মতি</h3><p>“হে ঈমানদারগণ! তোমরা একে অপরের সম্পদ অন্যায়ভাবে গ্রাস করো না, তবে পারস্পরিক সম্মতিক্রমে ব্যবসার মাধ্যমে গ্রহণ করো।” (সূরা আন-নিসা ৪:২৯)</p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন পারস্পরিক সম্মতিতে করতে হবে।</p></div>
+      <div class="method-card"><i class="fas fa-file-signature"></i><h3>৫. ব্যবসায়িক লেনদেন, চুক্তি ও ঋণ লিপিবদ্ধ করা</h3><p>“যখন তোমরা কোনো নির্দিষ্ট সময়ের জন্য ঋণের লেনদেন কর, তখন তা লিখে রাখো।  (সূরা আল-বাকারা ২:২৮২)। </p><br><p>সতর্কতা: ব্যবসায়িক লেনদেন, চুক্তি(সওদা) ও ঋণ লিপিবদ্ধ রাখা।</p></div>
+      <div class="method-card"><i class="fas fa-shield-alt"></i><h3>৬. ব্যবসায়িক চুক্তির প্রতিশ্রুতি রক্ষা করা</h3><p>“হে ঈমানদারগণ! তোমরা চুক্তি পূর্ণ করো।” (সূরা মায়িদাহ ৫:১)। </p><br><p>সতর্কতা: ব্যবসায় প্রতিশ্রুতি রক্ষা করা ইমানের অংশ।</p></div>
       
     </div>
 
