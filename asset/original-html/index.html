@@ -63,7 +63,33 @@
       min-height: 85vh;
       break-after: page;
     }
+    .cover-photo {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        page-break-after: always;
+        break-after: page;
+      }
+    .cover-photo img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
     .cover h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #0f6b4f, #b87333);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .cover-details{
+        margin-top: 3rem;
+    }
+    .cover-details h1 {
       font-size: 3.8rem;
       font-weight: 800;
       background: linear-gradient(135deg, #0f6b4f, #b87333);
@@ -262,11 +288,36 @@
       .section {
         padding: 1.5rem 2rem;
       }
-      .cover {
-        break-after: page;
+      .cover {        
         min-height: 0;
-        page-break-after: always;
         background: linear-gradient(125deg, #fff6ed 0%, #f7e9db 100%);
+        page-break-after: always;
+        break-after: page;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .cover-photo {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        page-break-after: always;
+        break-after: page;
+      }
+      .cover-photo img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .cover-details{
+        margin-top: 10px;
+      }
+      .cover-details h1 {
+        background: linear-gradient(135deg, #0f6b4f, #b87333);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -285,14 +336,7 @@
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
-      .cover h1 {
-        background: linear-gradient(135deg, #0f6b4f, #b87333);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
+      
       /* Keep all grid layouts intact */
       .toc-grid, .quran-grid, .hadith-grid, .feature-grid, .examples-grid {
         display: grid;
@@ -348,13 +392,27 @@
     <button class="print-btn" id="printEbookBtn"><i class="fas fa-print"></i> 📄 প্রিন্ট / PDF (A4 লেআউট)</button>
   </div>
 
-  <!-- COVER PAGE -->
+  <!-- COVER PAGE - উন্নত সংস্করণ -->
   <div class="cover section">
-    <div class="badge"><i class="fas fa-star-of-life"></i> শরিয়াহ সম্মত <i class="fas fa-star-of-life"></i></div>
-    <h1>ইসলামি ব্যবসায়িক নির্দেশিকা:<br>ক্রয়-বিক্রয়, শেয়ার, ইজারা</h1>
-    <div class="sub">হালাল ব্যবসার ত্রিমাত্রিক কাঠামো</div>
-    <div style="margin-top: 2rem;"> কুরআন-হাদীসের দলিল | ৩ টি মোড ও ৮টি উপ-পদ্ধতি | বাস্তব উদাহরণ </div>
-    <div style="margin-top: 3rem; font-size: 0.85rem;">ইসলামের সরল পথ | ইসলামী ওয়ে রিসার্চ টিম</div>
+    <!-- কভার ফটো - সঠিক ও প্রিন্ট-বান্ধব -->
+    <div class="cover-photo">
+      <img id="coverImg" alt="Islami Business Guide" />
+    </div>
+    <script>
+        var protocol = window.location.protocol; // "http:" or "https:"
+        var hostname = window.location.hostname;       
+        var imagePath = protocol + '//' + hostname + '/ai/islami-business-guide/asset/docs/cover-vertical.jpg';
+        document.getElementById('coverImg').src = imagePath;
+    </script>
+    <div class="cover-details">
+      <div class="badge"><i class="fas fa-star-of-life"></i> শরিয়াহ সম্মত <i class="fas fa-star-of-life"></i></div>
+      <h1>ইসলামি ব্যবসায়িক নির্দেশিকা:<br>ক্রয়-বিক্রয়, শেয়ার, ইজারা</h1>
+      <div class="sub">হালাল ব্যবসার ত্রিমাত্রিক কাঠামো</div>
+      <div style="margin-top: 2rem;"> কুরআন-হাদীসের দলিল | ৩ টি মোড ও ৮টি উপ-পদ্ধতি | বাস্তব উদাহরণ </div>
+      <div style="margin-top: 3rem; font-size: 0.85rem;">ইসলামের সরল পথ | ইসলামী ওয়ে রিসার্চ টিম</div>
+      
+    </div>
+    
   </div>
 
   <!-- TABLE OF CONTENTS -->
@@ -383,9 +441,9 @@
 কেন একসময়ের সত্যবাদী, আমানতদার, বিশ্বস্ত মুসলিম ব্যবসায়ী আজ মিথ্যা অঙ্গীকার, প্রতারণা, ওজনে কম দেওয়া, সুদ গর্হিত কাজে লিপ্ত?<br><br>
 মনে রাখবেন! আল্লাহই ব্যবসার মূল আইন দিয়েছেন। রাসূল (সা.) তা বিশদভাবে ব্যাখ্যা করেছেন। রাসূলুল্লাহ (সা.) নিজে ব্যবসা করেছেন এবং আমাদের তা  শিখিয়েছেন। ইসলামে উপার্জন ও জীবিকার ক্ষেত্রে হালাল-হারামের সীমারেখা স্পষ্ট। 
 </p><br>
-      <p>রাসূলুল্লাহ ﷺ বলেছেন: <br><strong>"হালাল উপার্জন এর সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ।" (আল-বায়হাকী, শুয়াবুল ঈমান)</strong></p><br>
       <p>পবিত্র কুরআনে আল্লাহ তায়ালা মানুষের জীবিকা নির্বাহের জন্য বিভিন্ন সৎ পেশার উল্লেখ ও স্বীকৃতি দিয়েছেন। এর মধ্যে উল্লেখযোগ্য হলো— <strong>বাণিজ্য বা ব্যবসা, কৃষি বা অনাবাদি জমি আবাদ, শ্রম বা শারীরিক পরিশ্রম, পশুপালন এবং বিভিন্ন কারিগরি ও সেবামূলক কাজ</strong>, যা মানুষকে হালাল উপায়ে জীবিকা অর্জনে উৎসাহিত করে।কুরআনের মূল নির্দেশ হলো—পেশা যেকোনোটিই হোক না কেন, তা অবশ্যই হালাল, সৎ এবং সততার সাথে পরিচালিত হতে হবে।</p><br>
-      <p>হালাল উপার্জন দোয়া ও ইবাদত কবুলের শর্ত। <br>রাসূলুল্লাহ ﷺ বলেছেন: <br><strong>“নিশ্চয় আল্লাহ পবিত্র, তিনি পবিত্র বস্তু ছাড়া গ্রহণ করেন না। আর তিনি মুমিনদেরকে যা আদেশ করেছেন, তা রাসূলগণকেও আদেশ করেছেন: 'হে রাসূলগণ! পবিত্র বস্তু থেকে আহার করো এবং সৎকর্ম করো।' অতঃপর তিনি এমন এক ব্যক্তির কথা উল্লেখ করলেন, যে দীর্ঘ সফর শেষে ধূলিমলিন অবস্থায় আকাশের দিকে হাত তুলে আল্লাহর কাছে প্রার্থনা করে, অথচ 'তার খাদ্য হারাম, পানীয় হারাম, পোশাক-পরিচ্ছদ হারাম এবং সে হারাম দিয়েই প্রতিপালিত। কাজেই কীভাবে তার দো‘আ কবুল হবে!'”(সহীহ মুসলিম হাদীস নং ১০১৫)</strong></p><br>
+      <p>রাসূলুল্লাহ ﷺ বলেছেন: <br><strong>"হালাল উপার্জন এর সন্ধান করা প্রতিটি মুসলিমের উপর ফরজ।" (আল-বায়হাকী, শুয়াবুল ঈমান)</strong></p><br>
+      <p>রাসূলুল্লাহ ﷺ বলেছেন: <strong>“নিশ্চয় আল্লাহ পবিত্র, তিনি পবিত্র বস্তু ছাড়া গ্রহণ করেন না। আর তিনি মুমিনদেরকে যা আদেশ করেছেন, তা রাসূলগণকেও আদেশ করেছেন: 'হে রাসূলগণ! পবিত্র বস্তু থেকে আহার করো এবং সৎকর্ম করো।' অতঃপর তিনি এমন এক ব্যক্তির কথা উল্লেখ করলেন, যে দীর্ঘ সফর শেষে ধূলিমলিন অবস্থায় আকাশের দিকে হাত তুলে আল্লাহর কাছে প্রার্থনা করে, অথচ 'তার খাদ্য হারাম, পানীয় হারাম, পোশাক-পরিচ্ছদ হারাম এবং সে হারাম দিয়েই প্রতিপালিত। কাজেই কীভাবে তার দো‘আ কবুল হবে!'”(সহীহ মুসলিম হাদীস নং ১০১৫)</strong> <br> <strong> *** </strong>সুতরাং হালাল উপার্জন দো‘আ ও ইবাদত কবুলের অন্যতম প্রধান শর্ত। <strong> *** </strong></p><br>
       <p><strong>"যে ব্যক্তি হারাম উপার্জন করে এবং তা থেকে দান করে, তাতে কোনো সওয়াব নেই; আর যে তা থেকে খায়, তা জাহান্নামের আগুন ছাড়া অন্য কিছু নয়।" (মুসনাদে আহমাদ, ৮৩৭৪)।</strong></p><br>
       <p>এছাড়া হালাল রুজি বরকত, আখিরাতে শান্তি ও আল্লাহর সন্তুষ্টি নিয়ে আসে। সুদের লেনদেন, ঘুষ, প্রতারণা, মিথ্যা ওজনের ব্যবসা সম্পূর্ণ হারাম। ইসলামী শরিয়াহ ব্যবসায় স্বচ্ছতা, পারস্পরিক সম্মতি, ঝুঁকি ভাগাভাগি এবং প্রকৃত সম্পদভিত্তিক লেনদেনের নির্দেশ দেয়। </p><br>
       <p>মুসলিম ব্যবসায়ীরা যদি আজ আল্লহর দেয়া নিয়ম অনুযায়ি ও রসূল (সঃ ) এর দেখানো পথে ব্যবসায় পরিচালনা করে  তাহলে মুসলিম ব্যবসায়ীরা তাদের হারানো গৌরব ফিরে পাবে, দুনিয়াতে তারা নেতৃত্ব দিবে এবং আখিরাতে তারা সম্মানজনক জায়গায় স্থান পাবে ইনশাল্লাহ।</p><br>

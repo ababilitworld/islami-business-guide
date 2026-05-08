@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Support Our Mission | Donate Now</title>
+  <!-- Google Fonts + Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(145deg, #fef9f0 0%, #fff5e6 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* abstract decorative shapes – modern & subtle */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(255, 215, 150, 0.25) 0%, rgba(255, 235, 200, 0) 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      bottom: -15%;
+      right: -5%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(255, 180, 110, 0.2) 0%, rgba(255, 220, 160, 0) 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* main container – no header/footer, fully focused */
+    .donation-hero {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    /* card style – modern glassmorphism meets clean white */
+    .donation-card {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 3rem;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.02);
+      overflow: hidden;
+      transition: transform 0.25s ease;
+      border: 1px solid rgba(255, 255, 245, 0.7);
+    }
+
+    /* inner padding */
+    .donation-inner {
+      padding: 3rem 2.5rem;
+    }
+
+    /* badge / top tag */
+    .impact-badge {
+      display: inline-block;
+      background: #ffedd5;
+      color: #b45309;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      letter-spacing: -0.2px;
+      margin-bottom: 1.8rem;
+      backdrop-filter: blur(4px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    /* main heading */
+    h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #2c2c2c 0%, #e06c1f 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+    }
+
+    .subhead {
+      font-size: 1.2rem;
+      color: #4b3b2b;
+      line-height: 1.4;
+      max-width: 85%;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      border-left: 3px solid #f97316;
+      padding-left: 1rem;
+    }
+
+    /* stats grid - beautiful metrics */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin-bottom: 2.8rem;
+      background: #ffffffcc;
+      border-radius: 2rem;
+      padding: 1.2rem 1rem;
+      justify-content: space-between;
+    }
+
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #e15d1a;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #5a4a34;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* donation options */
+    .donation-options-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d2a24;
+      margin-bottom: 1rem;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .donation-options-title i {
+      color: #f97316;
+      font-size: 1.2rem;
+    }
+
+    .amount-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .amount-btn {
+      background: white;
+      border: 1px solid #e9e0d3;
+      padding: 0.75rem 1.4rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #4a3b2c;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+
+    .amount-btn.active {
+      background: #f97316;
+      border-color: #f97316;
+      color: white;
+      box-shadow: 0 8px 20px -8px rgba(249, 115, 22, 0.4);
+    }
+
+    .amount-btn:hover:not(.active) {
+      background: #fff2e5;
+      border-color: #fbc18a;
+      transform: translateY(-2px);
+    }
+
+    .custom-amount {
+      margin-bottom: 2rem;
+    }
+
+    .custom-input-wrapper {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid #e2d9cf;
+      border-radius: 80px;
+      padding: 0.2rem 0.2rem 0.2rem 1.2rem;
+      transition: all 0.2s;
+    }
+
+    .custom-input-wrapper:focus-within {
+      border-color: #f97316;
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+
+    .currency-symbol {
+      font-weight: 700;
+      color: #f97316;
+      font-size: 1.2rem;
+      margin-right: 0.2rem;
+    }
+
+    .custom-input-wrapper input {
+      border: none;
+      flex: 1;
+      padding: 0.85rem 0;
+      font-size: 1rem;
+      font-weight: 500;
+      outline: none;
+      background: transparent;
+      font-family: 'Inter', monospace;
+    }
+
+    .custom-input-wrapper input::placeholder {
+      color: #bcaea0;
+      font-weight: 400;
+    }
+
+    /* double CTA buttons */
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 2.2rem 0 1rem;
+    }
+
+    .btn-primary {
+      flex: 1;
+      background: #f97316;
+      border: none;
+      padding: 1rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      box-shadow: 0 6px 14px rgba(249, 115, 22, 0.3);
+    }
+
+    .btn-primary i {
+      font-size: 1.1rem;
+    }
+
+    .btn-primary:hover {
+      background: #e2620c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 22px -8px rgba(249, 115, 22, 0.5);
+    }
+
+    .btn-secondary {
+      flex: 1;
+      background: transparent;
+      border: 1.5px solid #f97316;
+      padding: 1rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #f97316;
+      cursor: pointer;
+      transition: all 0.25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-secondary i {
+      font-size: 1rem;
+    }
+
+    .btn-secondary:hover {
+      background: #fef3e8;
+      border-color: #e2620c;
+      color: #e2620c;
+      transform: translateY(-2px);
+    }
+
+    /* trust / micro footer (but not a site footer – just a reassurance line) */
+    .trust-message {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #8a7a64;
+      border-top: 1px solid #f0e7dd;
+      padding-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-message span i {
+      margin-right: 0.3rem;
+      color: #f97316;
+      font-size: 0.75rem;
+    }
+
+    /* mobile fine-tune */
+    @media (max-width: 750px) {
+      body {
+        padding: 1rem;
+      }
+      .donation-inner {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .subhead {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      .stats-grid {
+        gap: 0.8rem;
+      }
+      .stat-number {
+        font-size: 1.6rem;
+      }
+      .amount-btn {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.9rem;
+      }
+      .cta-group {
+        flex-direction: column;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+      }
+    }
+
+    /* little pulse animation for primary CTA */
+    @keyframes softPulse {
+      0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(249, 115, 22, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+    }
+
+    .btn-primary {
+      animation: softPulse 2s infinite;
+    }
+
+    /* no header, no footer — only beautiful donation page */
+    a, .btn-primary, .btn-secondary {
+      text-decoration: none;
+    }
+
+    /* custom input number spinner removal */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+<div class="donation-hero">
+  <div class="donation-card">
+    <div class="donation-inner">
+      <!-- subtle badge (no header/footer, just context) -->
+      <div class="impact-badge">
+        <i class="fas fa-heart" style="margin-right: 6px;"></i> 100% impact transparency
+      </div>
+
+      <!-- main headline -->
+      <h1>Empower our<br>vision. <span style="background: linear-gradient(120deg, #f97316, #ffb347); background-clip: text; -webkit-background-clip: text; color: transparent;">Donate today.</span></h1>
+      <div class="subhead">
+        Your support fuels grassroots innovation & community-led projects. Every contribution creates tangible change.
+      </div>
+
+      <!-- impact stats: clean modern metrics -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2.4k+</div>
+          <div class="stat-label">Lives impacted</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">18</div>
+          <div class="stat-label">Active projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">94%</div>
+          <div class="stat-label">Direct funding</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">🏆 2025</div>
+          <div class="stat-label">Community choice</div>
+        </div>
+      </div>
+
+      <!-- Donation section -->
+      <div class="donation-options-title">
+        <i class="fas fa-hand-holding-heart"></i> 
+        <span>Choose donation amount</span>
+      </div>
+
+      <div class="amount-buttons" id="amountButtons">
+        <button data-amount="10" class="amount-btn">$10</button>
+        <button data-amount="25" class="amount-btn active">$25</button>
+        <button data-amount="50" class="amount-btn">$50</button>
+        <button data-amount="100" class="amount-btn">$100</button>
+        <button data-amount="250" class="amount-btn">$250</button>
+      </div>
+
+      <div class="custom-amount">
+        <div class="custom-input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="customAmountInput" placeholder="Other amount" min="1" step="1" value="">
+        </div>
+      </div>
+
+      <!-- Double CTA: Donate Now + Support our project -->
+      <div class="cta-group">
+        <button id="donateNowBtn" class="btn-primary">
+          <i class="fas fa-heart"></i> Donate now
+        </button>
+        <button id="supportProjectBtn" class="btn-secondary">
+          <i class="fas fa-hands-helping"></i> Support our project
+        </button>
+      </div>
+
+      <!-- optional trust badges: no footer links, just micro reassurance -->
+      <div class="trust-message">
+        <span><i class="fas fa-lock"></i> Secure SSL encryption</span>
+        <span><i class="fas fa-receipt"></i> Tax-deductible receipt</span>
+        <span><i class="fas fa-globe"></i> Global support</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ---------- Interactive Donation Amount Selection (beautiful UX) ----------
+  const amountBtns = document.querySelectorAll('.amount-btn');
+  const customInput = document.getElementById('customAmountInput');
+  
+  // Track selected amount (numeric value)
+  let selectedAmount = 25; // default active 25
+  
+  // Function to update active button style and clear custom input override
+  function setActiveButton(amount) {
+    amountBtns.forEach(btn => {
+      const btnAmount = parseInt(btn.getAttribute('data-amount'), 10);
+      if (btnAmount === amount) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    // if we set from button, clear custom input field's "active override"
+    if (customInput.value !== '') {
+      // do not force clear custom input's value but keep logical sync
+      // but we want custom input to reflect that button selection? better not to override user custom input if they typed.
+      // we keep consistency: when user clicks preset, update selectedAmount & clear custom input's "manual dominance" but leave value for clarity.
+      // Actually, UX best: preset overrides custom input value to reflect selection.
+      customInput.value = '';
+    }
+    selectedAmount = amount;
+  }
+  
+  // Handle preset button clicks
+  amountBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const amount = parseInt(btn.getAttribute('data-amount'), 10);
+      setActiveButton(amount);
+    });
+  });
+  
+  // Handle custom input: if user types a valid number, we deactivate preset buttons & set selectedAmount to custom value
+  customInput.addEventListener('input', function() {
+    let rawValue = this.value.trim();
+    if (rawValue === '') {
+      // If empty, revert to the previously active preset? maybe keep the last preset active but we do not unset. For clarity, remove active from all preset? 
+      // Better: If custom input is empty and user hasn't selected, keep the last preset active, but if they clear we fallback to default selected 25.
+      // For professional UX: we treat empty custom as no custom selection, but donation amount should be defined. so we fallback to 25.
+      // However, we don't auto change UI unless they click donate.
+      // we just manage selectedAmount = null? but we handle later in donation actions.
+      // simpler: if custom field has a valid number >0, we use that amount, deactivate all preset buttons.
+      if (customInput.value === '') {
+        // remove active highlight from all preset to indicate custom pending
+        amountBtns.forEach(btn => btn.classList.remove('active'));
+        selectedAmount = null; // no preset selected
+      }
+      return;
+    }
+    let customVal = parseFloat(rawValue);
+    if (!isNaN(customVal) && customVal > 0) {
+      // Deactivate all preset buttons
+      amountBtns.forEach(btn => btn.classList.remove('active'));
+      selectedAmount = customVal;
+    } else {
+      // invalid number, keep previous state but we don't remove highlight? 
+      // leave as is
+      if (selectedAmount !== null && !isNaN(selectedAmount)) {
+        // re-activate proper button if possible
+        const matchingBtn = Array.from(amountBtns).find(btn => parseInt(btn.getAttribute('data-amount'),10) === selectedAmount);
+        if(matchingBtn) matchingBtn.classList.add('active');
+      }
+    }
+  });
+  
+  // Ensure on page load the $25 is active and custom is empty
+  window.addEventListener('DOMContentLoaded', () => {
+    // set initial active
+    setActiveButton(25);
+    customInput.value = '';
+    selectedAmount = 25;
+  });
+  
+  // Helper to get final donation amount before redirect/alert
+  function getFinalAmount() {
+    // first priority: custom input if it has valid positive number
+    let customVal = parseFloat(customInput.value);
+    if (customInput.value !== '' && !isNaN(customVal) && customVal > 0) {
+      return customVal;
+    }
+    // else from selectedAmount from preset or fallback
+    if (selectedAmount !== null && !isNaN(selectedAmount) && selectedAmount > 0) {
+      return selectedAmount;
+    }
+    // fallback: try to find active button amount
+    const activeBtn = document.querySelector('.amount-btn.active');
+    if (activeBtn) {
+      return parseInt(activeBtn.getAttribute('data-amount'), 10);
+    }
+    return 25; // safe fallback
+  }
+  
+  // ---------- Donate Now & Support Project actions (integrate with external donation link) ----------
+  // Replace these URLs with your actual donation / project page links
+  const DONATION_PAGE_URL = "https://yourwebsite.com/donate";   // <-- UPDATE with your actual donation processing page
+  const SUPPORT_PROJECT_URL = "https://yourwebsite.com/support-our-project"; // <-- UPDATE with your project support page
+  
+  // Donate Now button: redirect with amount parameter (optional query string)
+  const donateBtn = document.getElementById('donateNowBtn');
+  const supportBtn = document.getElementById('supportProjectBtn');
+  
+  function redirectToDonation(amount, isSupportFlow = false) {
+    // For a real integration, you can append amount as query param: ?amount=XX
+    // This makes it easy for your backend/payment processor.
+    const baseUrl = isSupportFlow ? SUPPORT_PROJECT_URL : DONATION_PAGE_URL;
+    // ensure amount is integer/float formatted
+    const finalAmount = parseFloat(amount);
+    let url;
+    if (!isNaN(finalAmount) && finalAmount > 0) {
+      // encode amount parameter to keep clean
+      url = `${baseUrl}?amount=${encodeURIComponent(finalAmount)}&currency=USD`;
+    } else {
+      url = baseUrl;
+    }
+    // open in same tab (standard redirect)
+    window.location.href = url;
+  }
+  
+  donateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let amount = getFinalAmount();
+    if (amount === null || isNaN(amount) || amount <= 0) {
+      // fallback message or alert with friendly prompt
+      alert("Please select or enter a valid donation amount.");
+      return;
+    }
+    // optional: show confirm message before leaving? can be nice but direct is fine.
+    redirectToDonation(amount, false);
+  });
+  
+  supportBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    let amount = getFinalAmount();
+    if (amount === null || isNaN(amount) || amount <= 0) {
+      // For support project, maybe still allow without amount? But it's logical to use same.
+      alert("Please enter or select a contribution amount to support our project.");
+      return;
+    }
+    redirectToDonation(amount, true);
+  });
+  
+  // Additional micro interaction: when custom input gets focus, we could hint but not necessary.
+  // Also add a small effect for better UX: keyboard enter support
+  customInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (customInput.value && parseFloat(customInput.value) > 0) {
+        donateBtn.click();
+      } else {
+        alert("Please enter a valid donation amount.");
+      }
+    }
+  });
+  
+  // Also make amount buttons update custom input empty state perfectly
+  // Additional refinement: If someone clicks amount after typing custom, clear custom input.
+  // Already handled in setActiveButton: clears custom input value.
+  // However, setActiveButton clears customInput.value only when triggered via amount button click.
+  // Good.
+  // For smoothness, add click on amount buttons to also reset custom input placeholder style.
+  // done.
+</script>
+</body>
+</html>

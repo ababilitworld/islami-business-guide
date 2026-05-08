@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Support Our Mission | Donation Page</title>
+  <!-- Google Fonts + Font Awesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* -----------------------------------------------
+       THEME VARIABLES – change these to match your brand
+    ----------------------------------------------- */
+
+    /* Theme Creation Steps :
+
+        1. Select Color Scheme – primary, secondary, neutral, accent, and semantic colors (success, error, warning).
+
+        2. Select Typography – font families, sizes, weights, line heights, and heading scales.
+
+        3. Select Spacing – a consistent spacing scale (e.g., 4px, 8px, 16px, 24px) for margin, padding, and gaps.
+
+        4. Select Border Radius – small, medium, large values for cards, buttons, inputs.
+
+        5. Define Shadows & Elevation – subtle to pronounced box shadows for depth.
+
+        6. Establish Component Variables – button, input, card, modal specific tokens.
+
+        7. Accessibility & Contrast – ensure text/background contrast meets WCAG standards.
+
+        8. Create CSS Custom Properties (Variables) – to make the theme maintainable and themable.
+
+        9. Set Breakpoints & Responsive Rules – how the theme adapts to different screen sizes.
+
+
+    */
+    .theme-warm_&_inspiring 
+    {
+
+      /*******************************************/
+      /*** 1. Color scheme – warm & inspiring  ***/
+      /*******************************************/
+
+      /* Primary */
+      --color-primary: #f97316;
+      --color-primary-dark: #e2620c;
+      --color-primary-light: #ffd7ae;
+      --color-primary-soft: #fff1e6;
+      --color-gradient-start: #2c2c2c;
+      --color-gradient-end: #e06c1f;
+
+      /* secondary */
+
+      /* tertiary */
+
+      /* neutral */
+
+      /* accent */
+
+      /* semantic colors */
+      
+      /* Background & surface */
+      --color-bg-body: linear-gradient(145deg, #fef9f0 0%, #fff5e6 100%);
+      --color-card-bg: rgba(255, 255, 255, 0.92);
+      --color-card-border: rgba(255, 255, 245, 0.7);
+      
+      /* Text colors */
+      --color-text-heading: #2c2c2c;
+      --color-text-body: #4b3b2b;
+      --color-text-muted: #8a7a64;
+      --color-text-light: #5a4a34;
+      
+      /* Accents & badges */
+      --color-badge-bg: #ffedd5;
+      --color-badge-text: #b45309;
+      
+      /* Borders & shadows */
+      --color-border-light: #e9e0d3;
+      --color-border-focus: var(--color-primary);
+      --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-primary-hover: 0 12px 22px -8px rgba(249, 115, 22, 0.5);
+      --shadow-primary: 0 6px 14px rgba(249, 115, 22, 0.3);
+      
+      /****************************************/
+      /*********** 2. Typography *****************/
+      /****************************************/
+      
+      /* Font familiy */
+
+      --font-family-base: 'Inter', sans-serif;
+
+      /* Font size */
+
+      /* Font weight */
+      --font-weight-regular: 400;
+      --font-weight-medium: 500;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+      --font-weight-extrabold: 800;
+      --font-weight-boldest: 900;
+
+      /* Line height */
+
+      /* Heading scale */
+
+      /****************************************/
+      /************** 3. Spacing **************/
+      /****************************************/
+      
+      /* Spacing (modular scale) */
+      --space-xs: 0.5rem;
+      --space-sm: 0.75rem;
+      --space-md: 1rem;
+      --space-lg: 1.5rem;
+      --space-xl: 2rem;
+      --space-2xl: 2.5rem;
+      --space-3xl: 3rem;
+      
+      /****************************************/
+      /***********4. Border Radius ***********/
+      /****************************************/
+
+      /* Border radius */
+      --radius-sm: 0.5rem;
+      --radius-md: 1rem;
+      --radius-lg: 2rem;
+      --radius-xl: 3rem;
+      --radius-full: 9999px;
+
+      /****************************************/
+      /******* 5. Shadows & Elevation *********/
+      /****************************************/
+
+      /****************************************/
+      /*** 6. Establish Component Variables ***/
+      /****************************************/
+
+
+      /****************************************/
+      /*** 7. Accessibility & Contrast ********/
+      /****************************************/
+
+
+
+      /****************************************/
+      /* 8. CSS Custom Properties (Variables) */
+      /****************************************/
+
+
+      /****************************************/
+      /** 9. Breakpoints & Responsive Rules ***/
+      /****************************************/
+
+      
+      /****************************************/
+      /************** 9. Animation ************/
+      /****************************************/
+      
+      
+      /* Animation */
+      --transition-default: all 0.25s ease;
+      --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+    
+    /* Dark mode alternative (optional) – uncomment to enable automatic or add class */
+    /* @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg-body: linear-gradient(145deg, #1e1a14 0%, #2a241e 100%);
+        --color-card-bg: rgba(30, 26, 20, 0.92);
+        --color-text-heading: #f5e7d9;
+        --color-text-body: #e2d5c4;
+        --color-border-light: #4a3e30;
+      }
+    } */
+    
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: var(--font-family-base);
+      background: var(--color-bg-body);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl);
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    /* Decorative blobs (theme variables for opacity) */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(255, 215, 150, 0.25) 0%, rgba(255, 235, 200, 0) 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    body::after {
+      content: "";
+      position: absolute;
+      bottom: -15%;
+      right: -5%;
+      width: 60%;
+      height: 60%;
+      background: radial-gradient(circle, rgba(255, 180, 110, 0.2) 0%, rgba(255, 220, 160, 0) 80%);
+      border-radius: 50%;
+      z-index: 0;
+      pointer-events: none;
+    }
+    
+    /* Main container */
+    .donation-hero {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    /* Card – fully themed */
+    .donation-card {
+      background: var(--color-card-bg);
+      backdrop-filter: blur(2px);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-card);
+      overflow: hidden;
+      transition: transform 0.25s ease;
+      border: 1px solid var(--color-card-border);
+    }
+    
+    .donation-inner {
+      padding: var(--space-3xl) var(--space-2xl);
+    }
+    
+    /* Badge */
+    .impact-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-badge-bg);
+      color: var(--color-badge-text);
+      font-size: 0.8rem;
+      font-weight: var(--font-weight-semibold);
+      padding: 0.4rem var(--space-md);
+      border-radius: var(--radius-full);
+      letter-spacing: -0.2px;
+      margin-bottom: var(--space-xl);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    
+    /* Headings & text */
+    h1 {
+      font-size: 3.2rem;
+      font-weight: var(--font-weight-extrabold);
+      line-height: 1.2;
+      background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      letter-spacing: -0.02em;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .subhead {
+      font-size: 1.2rem;
+      color: var(--color-text-body);
+      line-height: 1.4;
+      max-width: 85%;
+      margin-bottom: var(--space-2xl);
+      font-weight: var(--font-weight-medium);
+      border-left: 3px solid var(--color-primary);
+      padding-left: var(--space-md);
+    }
+    
+    /* Stats grid */
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-2xl);
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg) var(--space-md);
+      justify-content: space-between;
+    }
+    
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      min-width: 100px;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: var(--font-weight-extrabold);
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      font-weight: var(--font-weight-medium);
+      color: var(--color-text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    /* Donation options title */
+    .donation-options-title {
+      font-size: 1rem;
+      font-weight: var(--font-weight-semibold);
+      color: var(--color-text-heading);
+      margin-bottom: var(--space-md);
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    
+    .donation-options-title i {
+      color: var(--color-primary);
+      font-size: 1.2rem;
+    }
+    
+    /* Amount buttons */
+    .amount-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-bottom: var(--space-lg);
+    }
+    
+    .amount-btn {
+      background: white;
+      border: 1px solid var(--color-border-light);
+      padding: 0.75rem 1.4rem;
+      border-radius: var(--radius-full);
+      font-weight: var(--font-weight-semibold);
+      font-size: 1rem;
+      color: var(--color-text-light);
+      cursor: pointer;
+      transition: var(--transition-default);
+      font-family: inherit;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    }
+    
+    .amount-btn.active {
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: white;
+      box-shadow: 0 8px 20px -8px rgba(249, 115, 22, 0.4);
+    }
+    
+    .amount-btn:hover:not(.active) {
+      background: var(--color-primary-soft);
+      border-color: var(--color-primary-light);
+      transform: translateY(-2px);
+    }
+    
+    /* Custom amount input */
+    .custom-amount {
+      margin-bottom: var(--space-2xl);
+    }
+    
+    .custom-input-wrapper {
+      display: flex;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-full);
+      padding: 0.2rem 0.2rem 0.2rem var(--space-lg);
+      transition: var(--transition-default);
+    }
+    
+    .custom-input-wrapper:focus-within {
+      border-color: var(--color-border-focus);
+      box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
+    }
+    
+    .currency-symbol {
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary);
+      font-size: 1.2rem;
+      margin-right: 0.2rem;
+    }
+    
+    .custom-input-wrapper input {
+      border: none;
+      flex: 1;
+      padding: 0.85rem 0;
+      font-size: 1rem;
+      font-weight: var(--font-weight-medium);
+      outline: none;
+      background: transparent;
+      font-family: var(--font-family-base);
+    }
+    
+    .custom-input-wrapper input::placeholder {
+      color: #bcaea0;
+      font-weight: var(--font-weight-regular);
+    }
+    
+    /* CTA Buttons group */
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+      margin: var(--space-2xl) 0 var(--space-md);
+    }
+    
+    .btn-primary {
+      flex: 1;
+      background: var(--color-primary);
+      border: none;
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-full);
+      font-weight: var(--font-weight-bold);
+      font-size: 1.1rem;
+      color: white;
+      cursor: pointer;
+      transition: var(--transition-bounce);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      box-shadow: var(--shadow-primary);
+    }
+    
+    .btn-primary i {
+      font-size: 1.1rem;
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-primary-hover);
+    }
+    
+    .btn-secondary {
+      flex: 1;
+      background: transparent;
+      border: 1.5px solid var(--color-primary);
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-full);
+      font-weight: var(--font-weight-semibold);
+      font-size: 1.05rem;
+      color: var(--color-primary);
+      cursor: pointer;
+      transition: var(--transition-default);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: inherit;
+      backdrop-filter: blur(4px);
+    }
+    
+    .btn-secondary i {
+      font-size: 1rem;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--color-primary-soft);
+      border-color: var(--color-primary-dark);
+      color: var(--color-primary-dark);
+      transform: translateY(-2px);
+    }
+    
+    /* Trust / micro reassurance */
+    .trust-message {
+      margin-top: var(--space-2xl);
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border-light);
+      padding-top: var(--space-lg);
+      display: flex;
+      justify-content: center;
+      gap: var(--space-lg);
+      flex-wrap: wrap;
+    }
+    
+    .trust-message span i {
+      margin-right: 0.3rem;
+      color: var(--color-primary);
+      font-size: 0.75rem;
+    }
+    
+    /* Pulse animation for primary CTA */
+    @keyframes softPulse {
+      0% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(249, 115, 22, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+    }
+    
+    .btn-primary {
+      animation: softPulse 2s infinite;
+    }
+    
+    /* Responsive adjustments using theme spacing */
+    @media (max-width: 750px) {
+      body {
+        padding: var(--space-md);
+      }
+      .donation-inner {
+        padding: var(--space-xl) var(--space-lg);
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .subhead {
+        font-size: 1rem;
+        max-width: 100%;
+      }
+      .stats-grid {
+        gap: var(--space-sm);
+      }
+      .stat-number {
+        font-size: 1.6rem;
+      }
+      .amount-btn {
+        padding: 0.55rem 1.1rem;
+        font-size: 0.9rem;
+      }
+      .cta-group {
+        flex-direction: column;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+      }
+      .trust-message {
+        gap: var(--space-md);
+      }
+    }
+    
+    /* Remove number input spinner if needed */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+<div class="donation-hero">
+  <div class="donation-card">
+    <div class="donation-inner">
+      <!-- badge -->
+      <div class="impact-badge">
+        <i class="fas fa-heart"></i> 100% impact transparency
+      </div>
+
+      <!-- headline with theme gradient -->
+      <h1>Empower our<br>vision. <span style="background: linear-gradient(120deg, var(--color-primary), #ffb347); background-clip: text; -webkit-background-clip: text; color: transparent;">Donate today.</span></h1>
+      <div class="subhead">
+        Your support fuels grassroots innovation & community-led projects. Every contribution creates tangible change.
+      </div>
+
+      <!-- stats -->
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">2.4k+</div>
+          <div class="stat-label">Lives impacted</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">18</div>
+          <div class="stat-label">Active projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">94%</div>
+          <div class="stat-label">Direct funding</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">🏆 2025</div>
+          <div class="stat-label">Community choice</div>
+        </div>
+      </div>
+
+      <!-- donation selection -->
+      <div class="donation-options-title">
+        <i class="fas fa-hand-holding-heart"></i> 
+        <span>Choose donation amount</span>
+      </div>
+
+      <div class="amount-buttons" id="amountButtons">
+        <button data-amount="10" class="amount-btn">$10</button>
+        <button data-amount="25" class="amount-btn active">$25</button>
+        <button data-amount="50" class="amount-btn">$50</button>
+        <button data-amount="100" class="amount-btn">$100</button>
+        <button data-amount="250" class="amount-btn">$250</button>
+      </div>
+
+      <div class="custom-amount">
+        <div class="custom-input-wrapper">
+          <span class="currency-symbol">$</span>
+          <input type="number" id="customAmountInput" placeholder="Other amount" min="1" step="1" value="">
+        </div>
+      </div>
+
+      <!-- double CTA -->
+      <div class="cta-group">
+        <button id="donateNowBtn" class="btn-primary">
+          <i class="fas fa-heart"></i> Donate now
+        </button>
+        <button id="supportProjectBtn" class="btn-secondary">
+          <i class="fas fa-hands-helping"></i> Support our project
+        </button>
+      </div>
+
+      <!-- trust line -->
+      <div class="trust-message">
+        <span><i class="fas fa-lock"></i> Secure SSL encryption</span>
+        <span><i class="fas fa-receipt"></i> Tax-deductible receipt</span>
+        <span><i class="fas fa-globe"></i> Global support</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ------------------------------------------------------------
+  // Interactive Donation logic (fully functional, theme independent)
+  // ------------------------------------------------------------
+  const amountBtns = document.querySelectorAll('.amount-btn');
+  const customInput = document.getElementById('customAmountInput');
+  let selectedAmount = 25;   // default active
+  
+  function setActiveButton(amount) {
+    amountBtns.forEach(btn => {
+      const btnAmount = parseInt(btn.getAttribute('data-amount'), 10);
+      if (btnAmount === amount) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+    customInput.value = '';
+    selectedAmount = amount;
+  }
+  
+  amountBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const amount = parseInt(btn.getAttribute('data-amount'), 10);
+      setActiveButton(amount);
+    });
+  });
+  
+  customInput.addEventListener('input', function() {
+    let rawValue = this.value.trim();
+    if (rawValue === '') {
+      amountBtns.forEach(btn => btn.classList.remove('active'));
+      selectedAmount = null;
+      return;
+    }
+    let customVal = parseFloat(rawValue);
+    if (!isNaN(customVal) && customVal > 0) {
+      amountBtns.forEach(btn => btn.classList.remove('active'));
+      selectedAmount = customVal;
+    } else {
+      if (selectedAmount !== null && !isNaN(selectedAmount)) {
+        const matchingBtn = Array.from(amountBtns).find(btn => parseInt(btn.getAttribute('data-amount'),10) === selectedAmount);
+        if(matchingBtn) matchingBtn.classList.add('active');
+      }
+    }
+  });
+  
+  window.addEventListener('DOMContentLoaded', () => {
+    setActiveButton(25);
+  });
+  
+  function getFinalAmount() {
+    let customVal = parseFloat(customInput.value);
+    if (customInput.value !== '' && !isNaN(customVal) && customVal > 0) {
+      return customVal;
+    }
+    if (selectedAmount !== null && !isNaN(selectedAmount) && selectedAmount > 0) {
+      return selectedAmount;
+    }
+    const activeBtn = document.querySelector('.amount-btn.active');
+    if (activeBtn) {
+      return parseInt(activeBtn.getAttribute('data-amount'), 10);
+    }
+    return 25;
+  }
+  
+  // ========== UPDATE THESE URLs TO YOUR ACTUAL DONATION LINKS ==========
+  const DONATION_PAGE_URL = "https://yourwebsite.com/donate";
+  const SUPPORT_PROJECT_URL = "https://yourwebsite.com/support-our-project";
+  
+  function redirectToDonation(amount, isSupportFlow = false) {
+    const baseUrl = isSupportFlow ? SUPPORT_PROJECT_URL : DONATION_PAGE_URL;
+    const finalAmount = parseFloat(amount);
+    let url;
+    if (!isNaN(finalAmount) && finalAmount > 0) {
+      url = `${baseUrl}?amount=${encodeURIComponent(finalAmount)}&currency=USD`;
+    } else {
+      url = baseUrl;
+    }
+    window.location.href = url;
+  }
+  
+  document.getElementById('donateNowBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    let amount = getFinalAmount();
+    if (amount === null || isNaN(amount) || amount <= 0) {
+      alert("Please select or enter a valid donation amount.");
+      return;
+    }
+    redirectToDonation(amount, false);
+  });
+  
+  document.getElementById('supportProjectBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    let amount = getFinalAmount();
+    if (amount === null || isNaN(amount) || amount <= 0) {
+      alert("Please enter or select a contribution amount to support our project.");
+      return;
+    }
+    redirectToDonation(amount, true);
+  });
+  
+  customInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      if (customInput.value && parseFloat(customInput.value) > 0) {
+        document.getElementById('donateNowBtn').click();
+      } else {
+        alert("Please enter a valid donation amount.");
+      }
+    }
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,2718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Wealth Alchemy | Premium Mentorship</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Apply the warm & inspiring theme to the entire page */
+    .theme-warm__and__inspiring {
+      /*******************************************/
+      /*** 1. Color scheme – warm & inspiring  ***/
+      /*******************************************/
+
+      /* Primary */
+      --color-primary: #f97316;
+      --color-primary-dark: #e2620c;
+      --color-primary-light: #ffd7ae;
+      --color-primary-soft: #fff1e6;
+      --color-gradient-start: #2c2c2c;
+      --color-gradient-end: #e06c1f;
+
+      /* Secondary (warm amber) */
+      --color-secondary: #f59e0b;
+      --color-secondary-dark: #d97706;
+      --color-secondary-light: #fde68a;
+      --color-secondary-soft: #fffbeb;
+
+      /* Tertiary (earthy olive) */
+      --color-tertiary: #7c6e5d;
+      --color-tertiary-dark: #5c4e3e;
+      --color-tertiary-light: #e6dfd3;
+      --color-tertiary-soft: #f9f6f0;
+
+      /* Neutral (warm grays) */
+      --color-neutral-50: #faf7f2;
+      --color-neutral-100: #f0ebe2;
+      --color-neutral-200: #e2d8cc;
+      --color-neutral-300: #cfc2b2;
+      --color-neutral-400: #b3a18c;
+      --color-neutral-500: #8b7560;
+      --color-neutral-600: #6b5744;
+      --color-neutral-700: #4f3f30;
+      --color-neutral-800: #3b2e22;
+      --color-neutral-900: #2a2118;
+      --color-neutral-950: #1a140e;
+
+      /* Accent (deep coral) */
+      --color-accent: #ea580c;
+      --color-accent-dark: #c2410c;
+      --color-accent-light: #ffedd5;
+      --color-accent-soft: #fff7ed;
+
+      /* Semantic colors */
+      --color-success: #10b981;
+      --color-success-dark: #059669;
+      --color-success-light: #d1fae5;
+      --color-warning: #f59e0b;
+      --color-warning-dark: #d97706;
+      --color-warning-light: #fef3c7;
+      --color-error: #ef4444;
+      --color-error-dark: #dc2626;
+      --color-error-light: #fee2e2;
+      --color-info: #3b82f6;
+      --color-info-dark: #2563eb;
+      --color-info-light: #dbeafe;
+
+      /* Background & surface */
+      --color-bg-body: linear-gradient(145deg, #fef9f0 0%, #fff5e6 100%);
+      --color-card-bg: rgba(255, 255, 255, 0.92);
+      --color-card-border: rgba(255, 255, 245, 0.7);
+      --color-surface-raised: #ffffff;
+      --color-surface-sunken: #fef6ea;
+
+      /* Text colors */
+      --color-text-heading: #2c2c2c;
+      --color-text-body: #4b3b2b;
+      --color-text-muted: #8a7a64;
+      --color-text-light: #5a4a34;
+      --color-text-inverse: #ffffff;
+      --color-text-link: var(--color-primary);
+      --color-text-link-hover: var(--color-primary-dark);
+
+      /* Accents & badges */
+      --color-badge-bg: #ffedd5;
+      --color-badge-text: #b45309;
+      --color-badge-success-bg: #d1fae5;
+      --color-badge-success-text: #065f46;
+      --color-badge-warning-bg: #fef3c7;
+      --color-badge-warning-text: #92400e;
+
+      /* Borders & shadows */
+      --color-border-light: #e9e0d3;
+      --color-border-medium: #d6cbbc;
+      --color-border-dark: #b8a990;
+      --color-border-focus: var(--color-primary);
+      --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.02);
+      --shadow-primary-hover: 0 12px 22px -8px rgba(249, 115, 22, 0.5);
+      --shadow-primary: 0 6px 14px rgba(249, 115, 22, 0.3);
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+      /****************************************/
+      /*********** 2. Typography *************/
+      /****************************************/
+
+      /* Font family */
+      --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+      --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+      /* Font size (modular scale) */
+      --font-size-xs: 0.75rem;     /* 12px */
+      --font-size-sm: 0.875rem;    /* 14px */
+      --font-size-md: 1rem;        /* 16px */
+      --font-size-lg: 1.125rem;    /* 18px */
+      --font-size-xl: 1.25rem;     /* 20px */
+      --font-size-2xl: 1.5rem;     /* 24px */
+      --font-size-3xl: 1.875rem;   /* 30px */
+      --font-size-4xl: 2.25rem;    /* 36px */
+      --font-size-5xl: 3rem;       /* 48px */
+
+      /* Font weight */
+      --font-weight-regular: 400;
+      --font-weight-medium: 500;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+      --font-weight-extrabold: 800;
+      --font-weight-boldest: 900;
+
+      /* Line height */
+      --line-height-tight: 1.2;
+      --line-height-normal: 1.5;
+      --line-height-relaxed: 1.75;
+      --line-height-loose: 2;
+
+      /* Heading scale */
+      --heading-scale-1: var(--font-size-5xl);
+      --heading-scale-2: var(--font-size-4xl);
+      --heading-scale-3: var(--font-size-3xl);
+      --heading-scale-4: var(--font-size-2xl);
+      --heading-scale-5: var(--font-size-xl);
+      --heading-scale-6: var(--font-size-lg);
+
+      /* Letter spacing */
+      --letter-spacing-tight: -0.02em;
+      --letter-spacing-normal: 0;
+      --letter-spacing-wide: 0.05em;
+
+      /****************************************/
+      /************** 3. Spacing **************/
+      /****************************************/
+
+      /* Spacing (modular scale based on 0.25rem = 4px) */
+      --space-xs: 0.5rem;      /* 8px */
+      --space-sm: 0.75rem;     /* 12px */
+      --space-md: 1rem;        /* 16px */
+      --space-lg: 1.5rem;      /* 24px */
+      --space-xl: 2rem;        /* 32px */
+      --space-2xl: 2.5rem;     /* 40px */
+      --space-3xl: 3rem;       /* 48px */
+      --space-4xl: 4rem;       /* 64px */
+      --space-5xl: 5rem;       /* 80px */
+
+      /* Container padding */
+      --container-padding: var(--space-lg);
+      --container-max-width: 1280px;
+
+      /****************************************/
+      /*********** 4. Border Radius ***********/
+      /****************************************/
+
+      --radius-sm: 0.5rem;      /* 8px */
+      --radius-md: 1rem;        /* 16px */
+      --radius-lg: 2rem;        /* 32px */
+      --radius-xl: 3rem;        /* 48px */
+      --radius-full: 9999px;
+
+      /****************************************/
+      /******* 5. Shadows & Elevation *********/
+      /****************************************/
+
+      --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+      --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+      /****************************************/
+      /*** 6. Establish Component Variables ***/
+      /****************************************/
+
+      /* Button */
+      --button-padding-y: var(--space-sm);
+      --button-padding-x: var(--space-lg);
+      --button-border-radius: var(--radius-md);
+      --button-font-weight: var(--font-weight-semibold);
+      --button-transition: var(--transition-default);
+
+      /* Card */
+      --card-padding: var(--space-lg);
+      --card-border-radius: var(--radius-lg);
+      --card-bg: var(--color-card-bg);
+      --card-shadow: var(--shadow-card);
+      --card-border: 1px solid var(--color-card-border);
+
+      /* Input */
+      --input-padding-y: var(--space-sm);
+      --input-padding-x: var(--space-md);
+      --input-border-radius: var(--radius-md);
+      --input-border: 1px solid var(--color-border-light);
+      --input-focus-ring: 0 0 0 3px rgba(249, 115, 22, 0.3);
+
+      /* Modal */
+      --modal-border-radius: var(--radius-xl);
+      --modal-padding: var(--space-xl);
+
+      /****************************************/
+      /*** 7. Accessibility & Contrast ********/
+      /****************************************/
+
+      /* Contrast ratios (WCAG AA compliant) */
+      --contrast-text-primary: 4.5;    /* body text on light bg */
+      --contrast-text-heading: 7.0;    /* heading on light bg */
+      --contrast-button: 4.5;          /* button text on primary bg */
+      
+      /* Focus outline */
+      --focus-outline-width: 2px;
+      --focus-outline-style: solid;
+      --focus-outline-color: var(--color-primary);
+      --focus-outline-offset: 2px;
+
+      /* Reduced motion */
+      --prefers-reduced-motion: reduce;
+
+      /****************************************/
+      /* 8. CSS Custom Properties (Variables) */
+      /****************************************/
+
+      /* Already defined as custom properties above */
+
+      /****************************************/
+      /** 9. Breakpoints & Responsive Rules ***/
+      /****************************************/
+
+      --breakpoint-sm: 640px;
+      --breakpoint-md: 768px;
+      --breakpoint-lg: 1024px;
+      --breakpoint-xl: 1280px;
+      --breakpoint-2xl: 1536px;
+
+      /* Responsive spacing multipliers */
+      --responsive-scale-mobile: 0.85;
+      --responsive-scale-tablet: 0.95;
+
+      /****************************************/
+      /************** 10. Animation ************/
+      /****************************************/
+
+      /* Animation durations & easings */
+      --transition-default: all 0.25s ease;
+      --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      --transition-slow: all 0.4s ease;
+      --transition-fast: all 0.15s ease;
+      --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+      --ease-out: cubic-bezier(0, 0, 0.2, 1);
+      --ease-in: cubic-bezier(0.4, 0, 1, 1);
+      --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+      /* Keyframe animations (to be used with classes) */
+      --animation-fade-in: fadeIn 0.3s var(--ease-out);
+      --animation-slide-up: slideUp 0.4s var(--ease-out);
+      --animation-pulse: pulse 2s infinite;
+    }
+
+    /* ========== VARIATION 1: LUXURY GOLD (Opulence & Premium) ========== */
+.theme-luxury-gold {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #d4af37;
+  --color-primary-dark: #b8960c;
+  --color-primary-light: #fceeb8;
+  --color-primary-soft: #fef9e6;
+  --color-gradient-start: #2c2412;
+  --color-gradient-end: #d4af37;
+
+  /* secondary */
+  --color-secondary: #f5a623;
+  --color-secondary-dark: #d48c1a;
+  --color-secondary-light: #fee7b0;
+  --color-secondary-soft: #fff8e7;
+
+  /* tertiary */
+  --color-tertiary: #a68a5c;
+  --color-tertiary-dark: #7d643e;
+  --color-tertiary-light: #e8ddc5;
+  --color-tertiary-soft: #faf5ea;
+
+  /* neutral */
+  --color-neutral-50: #fefbf2;
+  --color-neutral-100: #f5efdf;
+  --color-neutral-200: #e8deca;
+  --color-neutral-300: #d4c5aa;
+  --color-neutral-400: #b8a47f;
+  --color-neutral-500: #9e865c;
+  --color-neutral-600: #7d6844;
+  --color-neutral-700: #5e4d31;
+  --color-neutral-800: #443825;
+  --color-neutral-900: #2e2517;
+  --color-neutral-950: #1c160e;
+
+  /* accent */
+  --color-accent: #e6b422;
+  --color-accent-dark: #c4951a;
+  --color-accent-light: #fef0c0;
+  --color-accent-soft: #fffbea;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #fef8e7 0%, #fcf3d4 100%);
+  --color-card-bg: rgba(255, 255, 245, 0.96);
+  --color-card-border: rgba(212, 175, 55, 0.2);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fef6e0;
+
+  /* Text colors */
+  --color-text-heading: #2c2412;
+  --color-text-body: #4a3e24;
+  --color-text-muted: #8a7a4c;
+  --color-text-light: #6a5a3a;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #fef3c7;
+  --color-badge-text: #b47c00;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e8dcc8;
+  --color-border-medium: #d6c8ac;
+  --color-border-dark: #bea97e;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(212, 175, 55, 0.5);
+  --shadow-primary: 0 6px 14px rgba(212, 175, 55, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(212, 175, 55, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 2: ROYAL EMERALD (Wealth & Growth) ========== */
+.theme-royal-emerald {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #10b981;
+  --color-primary-dark: #059669;
+  --color-primary-light: #a7f3d0;
+  --color-primary-soft: #ecfdf5;
+  --color-gradient-start: #064e3b;
+  --color-gradient-end: #10b981;
+
+  /* secondary */
+  --color-secondary: #34d399;
+  --color-secondary-dark: #059669;
+  --color-secondary-light: #d1fae5;
+  --color-secondary-soft: #ecfdf5;
+
+  /* tertiary */
+  --color-tertiary: #6b7280;
+  --color-tertiary-dark: #4b5563;
+  --color-tertiary-light: #e5e7eb;
+  --color-tertiary-soft: #f9fafb;
+
+  /* neutral */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+  --color-neutral-950: #030712;
+
+  /* accent */
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-accent-light: #fef3c7;
+  --color-accent-soft: #fffbeb;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #f0fdf4 0%, #dcfce7 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.94);
+  --color-card-border: rgba(16, 185, 129, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #ecfdf5;
+
+  /* Text colors */
+  --color-text-heading: #064e3b;
+  --color-text-body: #2d3748;
+  --color-text-muted: #6b7280;
+  --color-text-light: #4b5563;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #d1fae5;
+  --color-badge-text: #065f46;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e5e7eb;
+  --color-border-medium: #d1d5db;
+  --color-border-dark: #9ca3af;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(16, 185, 129, 0.5);
+  --shadow-primary: 0 6px 14px rgba(16, 185, 129, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(16, 185, 129, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 3: SUNSET BLAZE (Energy & Urgency) ========== */
+.theme-sunset-blaze {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #ea580c;
+  --color-primary-dark: #c2410c;
+  --color-primary-light: #fed7aa;
+  --color-primary-soft: #fff7ed;
+  --color-gradient-start: #431407;
+  --color-gradient-end: #ea580c;
+
+  /* secondary */
+  --color-secondary: #f97316;
+  --color-secondary-dark: #ea580c;
+  --color-secondary-light: #ffedd5;
+  --color-secondary-soft: #fff7ed;
+
+  /* tertiary */
+  --color-tertiary: #9a3412;
+  --color-tertiary-dark: #7c2d12;
+  --color-tertiary-light: #fed7aa;
+  --color-tertiary-soft: #fff7ed;
+
+  /* neutral */
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e7e5e4;
+  --color-neutral-300: #d6d3d1;
+  --color-neutral-400: #a8a29e;
+  --color-neutral-500: #78716c;
+  --color-neutral-600: #57534e;
+  --color-neutral-700: #44403c;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1c1917;
+  --color-neutral-950: #0c0a09;
+
+  /* accent */
+  --color-accent: #dc2626;
+  --color-accent-dark: #b91c1c;
+  --color-accent-light: #fecaca;
+  --color-accent-soft: #fef2f2;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #fff7ed 0%, #ffedd5 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  --color-card-border: rgba(234, 88, 12, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fff7ed;
+
+  /* Text colors */
+  --color-text-heading: #431407;
+  --color-text-body: #431407;
+  --color-text-muted: #9a3412;
+  --color-text-light: #7c2d12;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #ffedd5;
+  --color-badge-text: #c2410c;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #fed7aa;
+  --color-border-medium: #fdba74;
+  --color-border-dark: #f97316;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(234, 88, 12, 0.25), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(234, 88, 12, 0.5);
+  --shadow-primary: 0 6px 14px rgba(234, 88, 12, 0.35);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(234, 88, 12, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 4: COOL MINT (Fresh & Modern) ========== */
+.theme-cool-mint {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #14b8a6;
+  --color-primary-dark: #0f766e;
+  --color-primary-light: #99f6e4;
+  --color-primary-soft: #f0fdfa;
+  --color-gradient-start: #134e4a;
+  --color-gradient-end: #14b8a6;
+
+  /* secondary */
+  --color-secondary: #5eead4;
+  --color-secondary-dark: #14b8a6;
+  --color-secondary-light: #ccfbf1;
+  --color-secondary-soft: #f0fdfa;
+
+  /* tertiary */
+  --color-tertiary: #94a3b8;
+  --color-tertiary-dark: #64748b;
+  --color-tertiary-light: #e2e8f0;
+  --color-tertiary-soft: #f8fafc;
+
+  /* neutral */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* accent */
+  --color-accent: #f43f5e;
+  --color-accent-dark: #e11d48;
+  --color-accent-light: #fecdd3;
+  --color-accent-soft: #fff1f2;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #f0fdfa 0%, #e6f7f2 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.96);
+  --color-card-border: rgba(20, 184, 166, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #f0fdfa;
+
+  /* Text colors */
+  --color-text-heading: #134e4a;
+  --color-text-body: #334155;
+  --color-text-muted: #64748b;
+  --color-text-light: #475569;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #ccfbf1;
+  --color-badge-text: #0f766e;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e2e8f0;
+  --color-border-medium: #cbd5e1;
+  --color-border-dark: #94a3b8;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(20, 184, 166, 0.45);
+  --shadow-primary: 0 6px 14px rgba(20, 184, 166, 0.25);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(20, 184, 166, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 5: BERRY RICH (Bold & Passionate) ========== */
+.theme-berry-rich {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #be185d;
+  --color-primary-dark: #9d174d;
+  --color-primary-light: #fbcfe8;
+  --color-primary-soft: #fdf2f8;
+  --color-gradient-start: #4c0519;
+  --color-gradient-end: #be185d;
+
+  /* secondary */
+  --color-secondary: #db2777;
+  --color-secondary-dark: #be185d;
+  --color-secondary-light: #fce7f3;
+  --color-secondary-soft: #fdf2f8;
+
+  /* tertiary */
+  --color-tertiary: #7e22ce;
+  --color-tertiary-dark: #6b21a5;
+  --color-tertiary-light: #e9d5ff;
+  --color-tertiary-soft: #faf5ff;
+
+  /* neutral */
+  --color-neutral-50: #faf5ff;
+  --color-neutral-100: #f3e8ff;
+  --color-neutral-200: #e9d5ff;
+  --color-neutral-300: #d8b4fe;
+  --color-neutral-400: #c084fc;
+  --color-neutral-500: #a855f7;
+  --color-neutral-600: #9333ea;
+  --color-neutral-700: #7e22ce;
+  --color-neutral-800: #6b21a5;
+  --color-neutral-900: #581c87;
+  --color-neutral-950: #3b0764;
+
+  /* accent */
+  --color-accent: #f59e0b;
+  --color-accent-dark: #d97706;
+  --color-accent-light: #fef3c7;
+  --color-accent-soft: #fffbeb;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #fdf2f8 0%, #fce7f3 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.95);
+  --color-card-border: rgba(190, 24, 93, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fdf2f8;
+
+  /* Text colors */
+  --color-text-heading: #4c0519;
+  --color-text-body: #4c0519;
+  --color-text-muted: #9d174d;
+  --color-text-light: #be185d;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #fce7f3;
+  --color-badge-text: #be185d;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #fbcfe8;
+  --color-border-medium: #f9a8d4;
+  --color-border-dark: #f472b6;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(190, 24, 93, 0.2), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(190, 24, 93, 0.5);
+  --shadow-primary: 0 6px 14px rgba(190, 24, 93, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(190, 24, 93, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 6: EARTH ORGANIC (Natural & Trustworthy) ========== */
+.theme-earth-organic {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #65a30d;
+  --color-primary-dark: #4d7c0f;
+  --color-primary-light: #d9f99d;
+  --color-primary-soft: #f7fee7;
+  --color-gradient-start: #1a2e05;
+  --color-gradient-end: #65a30d;
+
+  /* secondary */
+  --color-secondary: #84cc16;
+  --color-secondary-dark: #65a30d;
+  --color-secondary-light: #ecfccb;
+  --color-secondary-soft: #f7fee7;
+
+  /* tertiary */
+  --color-tertiary: #d97706;
+  --color-tertiary-dark: #b45309;
+  --color-tertiary-light: #fed7aa;
+  --color-tertiary-soft: #fff7ed;
+
+  /* neutral */
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #e7e5e4;
+  --color-neutral-300: #d6d3d1;
+  --color-neutral-400: #a8a29e;
+  --color-neutral-500: #78716c;
+  --color-neutral-600: #57534e;
+  --color-neutral-700: #44403c;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1c1917;
+  --color-neutral-950: #0c0a09;
+
+  /* accent */
+  --color-accent: #ea580c;
+  --color-accent-dark: #c2410c;
+  --color-accent-light: #fed7aa;
+  --color-accent-soft: #fff7ed;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #fefce8 0%, #fef9e6 100%);
+  --color-card-bg: rgba(255, 255, 245, 0.96);
+  --color-card-border: rgba(101, 163, 13, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fefce8;
+
+  /* Text colors */
+  --color-text-heading: #1a2e05;
+  --color-text-body: #3f3f37;
+  --color-text-muted: #78716c;
+  --color-text-light: #57534e;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #ecfccb;
+  --color-badge-text: #4d7c0f;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e7e5e4;
+  --color-border-medium: #d6d3d1;
+  --color-border-dark: #a8a29e;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(101, 163, 13, 0.45);
+  --shadow-primary: 0 6px 14px rgba(101, 163, 13, 0.25);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(101, 163, 13, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 7: OCEAN DEEP (Calm & Trustworthy) ========== */
+.theme-ocean-deep {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #0ea5e9;
+  --color-primary-dark: #0284c7;
+  --color-primary-light: #bae6fd;
+  --color-primary-soft: #f0f9ff;
+  --color-gradient-start: #0c4a6e;
+  --color-gradient-end: #0ea5e9;
+
+  /* secondary */
+  --color-secondary: #38bdf8;
+  --color-secondary-dark: #0ea5e9;
+  --color-secondary-light: #e0f2fe;
+  --color-secondary-soft: #f0f9ff;
+
+  /* tertiary */
+  --color-tertiary: #64748b;
+  --color-tertiary-dark: #475569;
+  --color-tertiary-light: #e2e8f0;
+  --color-tertiary-soft: #f8fafc;
+
+  /* neutral */
+  --color-neutral-50: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-300: #cbd5e1;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-600: #475569;
+  --color-neutral-700: #334155;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #0f172a;
+  --color-neutral-950: #020617;
+
+  /* accent */
+  --color-accent: #f97316;
+  --color-accent-dark: #ea580c;
+  --color-accent-light: #fed7aa;
+  --color-accent-soft: #fff7ed;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #f0f9ff 0%, #e6f2fa 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.94);
+  --color-card-border: rgba(14, 165, 233, 0.15);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #f0f9ff;
+
+  /* Text colors */
+  --color-text-heading: #0c4a6e;
+  --color-text-body: #1e293b;
+  --color-text-muted: #64748b;
+  --color-text-light: #475569;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #e0f2fe;
+  --color-badge-text: #0284c7;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e2e8f0;
+  --color-border-medium: #cbd5e1;
+  --color-border-dark: #94a3b8;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(14, 165, 233, 0.5);
+  --shadow-primary: 0 6px 14px rgba(14, 165, 233, 0.3);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography **************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(14, 165, 233, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+/* ========== VARIATION 8: NEON VIBRANT (Bold & High-Energy) ========== */
+.theme-neon-vibrant {
+  /*******************************************/
+  /*** 1. Color scheme – warm & inspiring  ***/
+  /*******************************************/
+
+  /* Primary */
+  --color-primary: #ec4899;
+  --color-primary-dark: #db2777;
+  --color-primary-light: #fbcfe8;
+  --color-primary-soft: #fdf2f8;
+  --color-gradient-start: #4c0519;
+  --color-gradient-end: #ec4899;
+
+  /* secondary */
+  --color-secondary: #f43f5e;
+  --color-secondary-dark: #e11d48;
+  --color-secondary-light: #fecdd3;
+  --color-secondary-soft: #fff1f2;
+
+  /* tertiary */
+  --color-tertiary: #8b5cf6;
+  --color-tertiary-dark: #7c3aed;
+  --color-tertiary-light: #e9d5ff;
+  --color-tertiary-soft: #faf5ff;
+
+  /* neutral */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f4f4f5;
+  --color-neutral-200: #e4e4e7;
+  --color-neutral-300: #d4d4d8;
+  --color-neutral-400: #a1a1aa;
+  --color-neutral-500: #71717a;
+  --color-neutral-600: #52525b;
+  --color-neutral-700: #3f3f46;
+  --color-neutral-800: #27272a;
+  --color-neutral-900: #18181b;
+  --color-neutral-950: #09090b;
+
+  /* accent */
+  --color-accent: #06b6d4;
+  --color-accent-dark: #0891b2;
+  --color-accent-light: #cffafe;
+  --color-accent-soft: #ecfeff;
+
+  /* semantic colors */
+  --color-success: #10b981;
+  --color-success-dark: #059669;
+  --color-success-light: #d1fae5;
+  --color-warning: #f59e0b;
+  --color-warning-dark: #d97706;
+  --color-warning-light: #fef3c7;
+  --color-error: #ef4444;
+  --color-error-dark: #dc2626;
+  --color-error-light: #fee2e2;
+  --color-info: #3b82f6;
+  --color-info-dark: #2563eb;
+  --color-info-light: #dbeafe;
+
+  /* Background & surface */
+  --color-bg-body: linear-gradient(145deg, #fdf2f8 0%, #fce7f3 100%);
+  --color-card-bg: rgba(255, 255, 255, 0.96);
+  --color-card-border: rgba(236, 72, 153, 0.2);
+  --color-surface-raised: #ffffff;
+  --color-surface-sunken: #fdf2f8;
+
+  /* Text colors */
+  --color-text-heading: #4c0519;
+  --color-text-body: #3f3f46;
+  --color-text-muted: #71717a;
+  --color-text-light: #52525b;
+  --color-text-inverse: #ffffff;
+  --color-text-link: var(--color-primary);
+  --color-text-link-hover: var(--color-primary-dark);
+
+  /* Accents & badges */
+  --color-badge-bg: #fbcfe8;
+  --color-badge-text: #db2777;
+  --color-badge-success-bg: #d1fae5;
+  --color-badge-success-text: #065f46;
+  --color-badge-warning-bg: #fef3c7;
+  --color-badge-warning-text: #92400e;
+
+  /* Borders & shadows */
+  --color-border-light: #e4e4e7;
+  --color-border-medium: #d4d4d8;
+  --color-border-dark: #a1a1aa;
+  --color-border-focus: var(--color-primary);
+  --shadow-card: 0 25px 45px -12px rgba(236, 72, 153, 0.25), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-primary-hover: 0 12px 22px -8px rgba(236, 72, 153, 0.5);
+  --shadow-primary: 0 6px 14px rgba(236, 72, 153, 0.35);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+  /****************************************/
+  /*********** 2. Typography *****************/
+  /****************************************/
+
+  /* Font familiy */
+  --font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font size */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weight */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+  --font-weight-boldest: 900;
+
+  /* Line height */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Heading scale */
+  --heading-scale-1: var(--font-size-5xl);
+  --heading-scale-2: var(--font-size-4xl);
+  --heading-scale-3: var(--font-size-3xl);
+  --heading-scale-4: var(--font-size-2xl);
+  --heading-scale-5: var(--font-size-xl);
+  --heading-scale-6: var(--font-size-lg);
+
+  /* Letter spacing */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /****************************************/
+  /************** 3. Spacing **************/
+  /****************************************/
+
+  /* Spacing (modular scale) */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+  --space-4xl: 4rem;
+  --space-5xl: 5rem;
+
+  /* Container padding */
+  --container-padding: var(--space-lg);
+  --container-max-width: 1280px;
+
+  /****************************************/
+  /***********4. Border Radius ***********/
+  /****************************************/
+
+  /* Border radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 2rem;
+  --radius-xl: 3rem;
+  --radius-full: 9999px;
+
+  /****************************************/
+  /******* 5. Shadows & Elevation *********/
+  /****************************************/
+
+  --shadow-elevation-1: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-2: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-elevation-3: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-elevation-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --shadow-elevation-5: 0 25px 35px -12px rgba(0, 0, 0, 0.2);
+
+  /****************************************/
+  /*** 6. Establish Component Variables ***/
+  /****************************************/
+
+  /* Button */
+  --button-padding-y: var(--space-sm);
+  --button-padding-x: var(--space-lg);
+  --button-border-radius: var(--radius-md);
+  --button-font-weight: var(--font-weight-semibold);
+  --button-transition: var(--transition-default);
+
+  /* Card */
+  --card-padding: var(--space-lg);
+  --card-border-radius: var(--radius-lg);
+  --card-bg: var(--color-card-bg);
+  --card-shadow: var(--shadow-card);
+  --card-border: 1px solid var(--color-card-border);
+
+  /* Input */
+  --input-padding-y: var(--space-sm);
+  --input-padding-x: var(--space-md);
+  --input-border-radius: var(--radius-md);
+  --input-border: 1px solid var(--color-border-light);
+  --input-focus-ring: 0 0 0 3px rgba(236, 72, 153, 0.3);
+
+  /* Modal */
+  --modal-border-radius: var(--radius-xl);
+  --modal-padding: var(--space-xl);
+
+  /****************************************/
+  /*** 7. Accessibility & Contrast ********/
+  /****************************************/
+
+  /* Contrast ratios (WCAG AA compliant) */
+  --contrast-text-primary: 4.5;
+  --contrast-text-heading: 7.0;
+  --contrast-button: 4.5;
+  
+  /* Focus outline */
+  --focus-outline-width: 2px;
+  --focus-outline-style: solid;
+  --focus-outline-color: var(--color-primary);
+  --focus-outline-offset: 2px;
+
+  /* Reduced motion */
+  --prefers-reduced-motion: reduce;
+
+  /****************************************/
+  /* 8. CSS Custom Properties (Variables) */
+  /****************************************/
+
+  /****************************************/
+  /** 9. Breakpoints & Responsive Rules ***/
+  /****************************************/
+
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Responsive spacing multipliers */
+  --responsive-scale-mobile: 0.85;
+  --responsive-scale-tablet: 0.95;
+
+  /****************************************/
+  /************** 9. Animation ************/
+  /****************************************/
+
+  /* Animation */
+  --transition-default: all 0.25s ease;
+  --transition-bounce: all 0.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  --transition-slow: all 0.4s ease;
+  --transition-fast: all 0.15s ease;
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-bounce: cubic-bezier(0.2, 0.9, 0.4, 1.1);
+
+  /* Keyframe animations (to be used with classes) */
+  --animation-fade-in: fadeIn 0.3s var(--ease-out);
+  --animation-slide-up: slideUp 0.4s var(--ease-out);
+  --animation-pulse: pulse 2s infinite;
+}
+
+    /* apply theme to body */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-family-base);
+      background: var(--color-bg-body);
+      color: var(--color-text-body);
+      line-height: var(--line-height-normal);
+    }
+
+    /* Global container */
+    .container {
+      max-width: var(--container-max-width);
+      margin: 0 auto;
+      padding: 0 var(--container-padding);
+    }
+
+    /* button styles using theme variables */
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-primary);
+      color: white;
+      font-weight: var(--button-font-weight);
+      padding: var(--button-padding-y) var(--button-padding-x);
+      border-radius: var(--button-border-radius);
+      text-decoration: none;
+      transition: var(--transition-default);
+      border: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-primary);
+    }
+    .btn-primary:hover {
+      background: var(--color-primary-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-primary-hover);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--color-primary);
+      color: var(--color-primary-dark);
+      padding: calc(var(--button-padding-y) - 2px) var(--button-padding-x);
+      border-radius: var(--button-border-radius);
+      font-weight: var(--font-weight-semibold);
+      text-decoration: none;
+      transition: var(--transition-default);
+      display: inline-block;
+    }
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+
+    /* card grid */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-xl);
+      margin: var(--space-3xl) 0;
+    }
+    .card {
+      background: var(--color-card-bg);
+      backdrop-filter: blur(2px);
+      border-radius: var(--card-border-radius);
+      padding: var(--card-padding);
+      box-shadow: var(--card-shadow);
+      border: var(--card-border);
+      transition: var(--transition-bounce);
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-elevation-5);
+    }
+    .card i {
+      font-size: 2.5rem;
+      color: var(--color-primary);
+      margin-bottom: var(--space-md);
+    }
+
+    /* hero section */
+    .hero {
+      padding: var(--space-5xl) 0 var(--space-4xl);
+      text-align: center;
+      background: linear-gradient(135deg, #fff9f0 0%, #fff0e0 100%);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+    .hero h1 {
+      font-size: var(--heading-scale-1);
+      font-weight: var(--font-weight-extrabold);
+      background: linear-gradient(135deg, var(--color-primary-dark), var(--color-accent));
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: var(--space-md);
+      letter-spacing: var(--letter-spacing-tight);
+    }
+    .hero p {
+      font-size: var(--font-size-xl);
+      color: var(--color-text-light);
+      max-width: 700px;
+      margin: 0 auto var(--space-xl);
+    }
+
+    /* testimonial */
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-3xl) 0;
+    }
+    .testimonial {
+      background: var(--color-surface-raised);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      box-shadow: var(--shadow-md);
+      border-left: 6px solid var(--color-primary);
+    }
+
+    /* pricing card */
+    .pricing-card {
+      background: var(--color-surface-raised);
+      border-radius: var(--radius-xl);
+      padding: var(--space-2xl);
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition-default);
+    }
+    .pricing-card.featured {
+      border: 2px solid var(--color-primary);
+      transform: scale(1.02);
+      background: var(--color-primary-soft);
+    }
+    .price {
+      font-size: var(--font-size-4xl);
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary-dark);
+      margin: var(--space-md) 0;
+    }
+
+    footer {
+      background: var(--color-neutral-800);
+      color: var(--color-neutral-200);
+      text-align: center;
+      padding: var(--space-3xl) 0;
+      margin-top: var(--space-4xl);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .animate {
+      animation: fadeIn 0.6s var(--ease-out);
+    }
+    @media (max-width: 768px) {
+      .hero h1 { font-size: var(--font-size-4xl); }
+      .grid-3 { gap: var(--space-lg); }
+    }
+  </style>
+</head>
+<body class="theme-luxury-gold">
+  <!-- Insert this block just after <body> tag (before the .hero section) -->
+<div class="theme-switcher" style="position: fixed; top: 20px; right: 20px; z-index: 9999; background: var(--color-card-bg); backdrop-filter: blur(8px); border-radius: var(--radius-full); padding: 0.5rem 1rem; box-shadow: var(--shadow-lg); display: flex; gap: 0.5rem; flex-wrap: wrap; border: 1px solid var(--color-border-light);">
+  <button class="theme-btn" data-theme="theme-warm__and__inspiring" style="background: #f97316; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer; box-shadow: 0 0 0 2px white, 0 0 0 3px rgba(0,0,0,0.1);" title="Warm & Inspiring"></button>
+  <button class="theme-btn" data-theme="theme-luxury-gold" style="background: #d4af37; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Luxury Gold"></button>
+  <button class="theme-btn" data-theme="theme-royal-emerald" style="background: #10b981; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Royal Emerald"></button>
+  <button class="theme-btn" data-theme="theme-sunset-blaze" style="background: #ea580c; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Sunset Blaze"></button>
+  <button class="theme-btn" data-theme="theme-cool-mint" style="background: #14b8a6; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Cool Mint"></button>
+  <button class="theme-btn" data-theme="theme-berry-rich" style="background: #be185d; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Berry Rich"></button>
+  <button class="theme-btn" data-theme="theme-earth-organic" style="background: #65a30d; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Earth Organic"></button>
+  <button class="theme-btn" data-theme="theme-ocean-deep" style="background: #0ea5e9; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Ocean Deep"></button>
+  <button class="theme-btn" data-theme="theme-neon-vibrant" style="background: #ec4899; width: 30px; height: 30px; border-radius: 50%; border: none; cursor: pointer;" title="Neon Vibrant"></button>
+</div>
+<script>
+  (function() {
+    const buttons = document.querySelectorAll('.theme-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const theme = this.getAttribute('data-theme');
+        document.body.className = theme;
+        // optional: store preference in localStorage
+        localStorage.setItem('selectedTheme', theme);
+      });
+    });
+    // load saved theme
+    const savedTheme = localStorage.getItem('selectedTheme');
+    if (savedTheme && document.body.classList) {
+      document.body.className = savedTheme;
+    }
+  })();
+</script>
+  <div class="hero">
+    <div class="container">
+      <div class="animate">
+        <span class="badge" style="background: var(--color-badge-bg); color: var(--color-badge-text); padding: 0.3rem 1rem; border-radius: var(--radius-full); display: inline-block; margin-bottom: 1rem;">✨ Limited Spots Available</span>
+        <h1>Wealth Alchemy:<br>Turn Ambition Into 7-Figure Income</h1>
+        <p>Join the premier mentorship for entrepreneurs who want to scale with integrity, impact, and unstoppable momentum.</p>
+        <a href="#" class="btn-primary">🎯 Apply for Free Strategy Call</a>
+        <a href="#" class="btn-outline" style="margin-left: 1rem;">📖 Download Syllabus</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- features grid -->
+    <div class="grid-3">
+      <div class="card">
+        <i class="fas fa-brain"></i>
+        <h3 style="color: var(--color-text-heading);">Mindset Mastery</h3>
+        <p>Reprogram scarcity blocks and adopt wealth psychology used by top 1% earners. Daily rituals that rewire success.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3 style="color: var(--color-text-heading);">Scalable Systems</h3>
+        <p>Automate client acquisition, build recurring revenue, and leverage AI to 10x your output without burnout.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-handshake"></i>
+        <h3 style="color: var(--color-text-heading);">High-Ticket Closer</h3>
+        <p>Master negotiation frameworks that command $10k+ fees. Scripts, objection handling, and premium value stacking.</p>
+      </div>
+    </div>
+
+    <!-- social proof / testimonials -->
+    <h2 style="font-size: var(--font-size-3xl); text-align: center; margin-top: var(--space-3xl);">Trusted by 500+ entrepreneurs</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial"><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><p>“Went from $8k to $47k/month in 4 months. The system is pure gold.”</p><strong>— Sarah J., E‑commerce</strong></div>
+      <div class="testimonial"><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><p>“Best investment I made. My coaching practice doubled in 90 days.”</p><strong>— David K., Business Coach</strong></div>
+      <div class="testimonial"><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><i class="fas fa-star" style="color: var(--color-primary);"></i><p>“Finally a program that combines spirituality and scale. Life-changing.”</p><strong>— Aisha R., Author</strong></div>
+    </div>
+
+    <!-- pricing section -->
+    <h2 style="font-size: var(--font-size-3xl); text-align: center; margin-top: var(--space-4xl);">Choose Your Path to Wealth</h2>
+    <div class="grid-3" style="margin-bottom: var(--space-4xl);">
+      <div class="pricing-card">
+        <h3>Ignite</h3>
+        <div class="price">$997</div>
+        <p>Self-paced video modules + community access. Perfect for beginners.</p>
+        <ul style="list-style: none; margin: 1rem 0; text-align: left;">
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> 6 core modules</li>
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Private FB group</li>
+        </ul>
+        <a href="#" class="btn-outline" style="width: 100%;">Enroll Now</a>
+      </div>
+      <div class="pricing-card featured">
+        <span style="background: var(--color-primary); color: white; padding: 0.2rem 1rem; border-radius: 20px;">🔥 Most Popular</span>
+        <h3>Elite Mentorship</h3>
+        <div class="price">$2,997</div>
+        <p>12-week group coaching + live strategy calls + done-for-you templates.</p>
+        <ul style="list-style: none; margin: 1rem 0; text-align: left;">
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Weekly live hot seats</li>
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> High-ticket scripts</li>
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> 1:1 bonus session</li>
+        </ul>
+        <a href="#" class="btn-primary" style="width: 100%;">Apply Now →</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Legacy</h3>
+        <div class="price">$7,997</div>
+        <p>VIP private consulting: 6 months of 1-on-1 done-with-you implementation.</p>
+        <ul style="list-style: none; margin: 1rem 0; text-align: left;">
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Weekly deep-dive calls</li>
+          <li><i class="fas fa-check-circle" style="color: var(--color-success);"></i> Custom growth roadmap</li>
+        </ul>
+        <a href="#" class="btn-outline" style="width: 100%;">Talk to Advisor</a>
+      </div>
+    </div>
+
+    <!-- CTA banner with gradient -->
+    <div style="background: linear-gradient(125deg, var(--color-primary-soft), var(--color-secondary-soft)); border-radius: var(--radius-xl); padding: var(--space-3xl); text-align: center; margin: var(--space-3xl) 0;">
+      <i class="fas fa-gem" style="font-size: 3rem; color: var(--color-primary);"></i>
+      <h2 style="margin: var(--space-md) 0;">Ready to Transform Your Financial Future?</h2>
+      <p style="max-width: 600px; margin: 0 auto var(--space-lg);">Join a community of high-achievers who turned passion into profit. Spots are limited.</p>
+      <a href="#" class="btn-primary" style="padding: 1rem 2rem; font-size: 1.2rem;">🚀 Claim Your Seat →</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Wealth Alchemy — Inspiring Abundance, One Entrepreneur at a Time.</p>
+      <div style="margin-top: var(--space-md);">
+        <i class="fab fa-instagram" style="margin: 0 8px; opacity: 0.8;"></i>
+        <i class="fab fa-linkedin" style="margin: 0 8px; opacity: 0.8;"></i>
+        <i class="fab fa-x-twitter" style="margin: 0 8px; opacity: 0.8;"></i>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
