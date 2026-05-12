@@ -283,9 +283,9 @@
       .print-bar, .print-btn {
         display: none !important;
       }
-      .section {
+      /* .section {
         padding: 1.5rem 2rem;
-      }
+      } */
       .cover {        
         min-height: 0;
         background: linear-gradient(125deg, #fff6ed 0%, #f7e9db 100%);
@@ -296,7 +296,12 @@
       }
       .cover-photo {
         width: 100%;
-        padding: 1.5rem;
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+        -o-object-fit: fill;
+        object-fit: fill;
         break-inside: avoid;
         page-break-inside: avoid;
         page-break-after: always;
@@ -304,9 +309,13 @@
       }
       .cover-photo img {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: block;
-        margin: 0 auto;
+        margin: 0;
+        padding: 0;
+        -o-object-fit: fill;
+        object-fit: fill;
+
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -393,15 +402,20 @@
   </div>
 
   <!-- COVER PAGE - উন্নত সংস্করণ -->
-  <div class="cover section">
+  <div class="section cover">
     <!-- কভার ফটো - সঠিক ও প্রিন্ট-বান্ধব -->
     <div class="cover-photo">
       <img id="coverImg" alt="Islami Business Guide" />
     </div>
     <script>
         var protocol = window.location.protocol; // "http:" or "https:"
-        var hostname = window.location.hostname;       
-        var imagePath = protocol + '//' + hostname + '/ai/islami-business-guide/asset/docs/cover-vertical.jpg';
+        var hostname = window.location.hostname; 
+        var imagePathSuffix = "/asset/docs/cover-vertical.jpg";
+        if(hostname == "test.aih")
+        {
+          imagePathSuffix = "/ai/islami-business-guide/asset/docs/cover-vertical.jpg";
+        }      
+        var imagePath = protocol + '//' + hostname + imagePathSuffix;
         var imgElement = document.getElementById('coverImg');
         if (imgElement) {
             imgElement.src = imagePath;
@@ -428,7 +442,7 @@
 
   <!-- TABLE OF CONTENTS -->
   <div class="section" style="background: #fffbf5;">
-    <h2 style="font-size: 2rem; border-left: none; text-align: center;"><i class="fas fa-list-ul"></i> সূচিপত্র</h2>
+    <h2 style="font-size: 2rem; border-left: none; text-align: center;"><i class="fas fa-list-ul"></i>  সূচিপত্র</h2>
     <div class="toc-grid">
       <div class="toc-card"><span class="chap-num">০১</span><br><strong>ভূমিকা</strong><br>হালাল উপার্জন এর প্রয়োজনীয়তা</div>
       <div class="toc-card"><span class="chap-num">০২</span><br><strong>ব্যবসায়িক লেনদেন এর মূলনীতি ও ধাপ সমূহ</strong><br>কুরআন ও হাদীস ভিত্তিক মৌলিক নীতিমালা</div>
